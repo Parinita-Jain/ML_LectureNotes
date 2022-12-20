@@ -1,0 +1,1735 @@
+Data_DataTriangle:
+
+Data can be any observation that has been recorded.
+data->information->knowledge->wisdom
+e.g. 100121->10-01-21->birthday->purchase gift.
+
+1 person generates 40EB of data-
+1024mb->1 gb
+1024gb->1 tb
+1024tb->1 pb (peta byte) 
+if datasize range above 1 pb than its a bigdata
+1024pb->1 eb (exa byte).,and 1 person produce 40 eb of data.
+
+
+
+Now, what are the advancement in ML domain-
+1.Amazon Go Shopping Mart eg
+2.Seeing AI by Microsoft. 
+3.GPT4 technology ,it is kind of a narrator technology or text completion technology ,but it's banned now.
+
+Andrew NG, Geoferry Hinton,Yann LeCun, Yoshua Bengio are the curators of AI.
+
+
+AI is research based industry.There is no exact aanswer.
+
+Data Analytics - needs Maths,Statistics,Business Expertise (i.e. understand the problem from domain point of view by studying the data.i.e. understanding rows & cols)
+Tools required- Excel,Advance Excel, SQL, Tableau, PowerBi, and a little bit of programming.Dashboarding tools are excel,adv excel,tableau,power bi
+
+Data Scientist - He is next to ceo.They take business decisions. Evrything Data Analyst knows + alot of programming+ m/c learning(nlp,compvision, deep learning),
+should of strong hold on algorithms for searching, sorting, finding also knows big data.
+
+Data Engineer - Previously,data eng was referred as SQL developer.He sould know,mathematics and Statistics knowledge., RDBMS, Data EXtraction(i.e.Web Scrapping),
+There job role is to collect the data and give to data analyst or data scientist.
+
+Data Analytics->level1- MIS,level2->DescriptiveAnalysis,level3->Data Visualization/Dashboard ,level4->predictive modelling predicts what is likely to happen.This is by 
+ML engineer, Level5-> big data : gives ans of what can be done using this data. For which, we use hadooop. 
+
+Statistician-In the domain of statistics, data is costly,U r paid to collect the data, and do MIS.
+
+ML Engineer-Here,data is cheap.U r paid to aska right ques and draw insights from data.
+
+
+Population is a universalset. Sample is subset. Statistics is study of sample.Parameter is mu for mean in population.Statistics we have xdash -mean.
+std dic is sigma in parameter. S is std dev in sample
+
+population	  sample
+universal set	  sub set
+parameter	  statistics
+mu -mean	  Xbar
+sigma -std dev	  S
+Nbar - population (N-1)bar
+var-
+  (x-xhat)^2/N    (x-xhat)^2/N-1
+
+
+Statistics-To collect, Analyse,Summarize,interpret and to draw conclusion from data. i.e. we are studying sample of data. Now,inferential statistics cover 
+interpret and drawing conclusion part i.e. whether hypothesis is valid or invalid.
+
+Descriptive statistics is how well we can describe our data by concepts like- Measure of central dependency, dispersion,etc. For this u must me using some
+listor tuple, or any other data.
+
+Series- Series is collection of values. There are many typesof series. At initial level when we try to use is individual series.For eg. for 100 students in my 
+class ,I conducted an exam of 10  marks. Now, I ask them individually,what marks they got? That is,keeping atrackof each and every data.It's darwback is
+it's time consuming and we cannot draw any conclusion out of it.Data is maintained in random format.
+
+lly, Discrete series - Creating two cols for  marks and no. of students.Like-
+
+Marks  No.of Students
+1	2
+2	2
+3	4
+4	1
+5	6
+6	7
+7	7
+8	3
+9	2
+10	1
+
+It gives insight about the class like, many students got above 4 marks.
+
+Third,is continuous series , whichis inclusive continuous series and exclusive continuous series.Thisis for maintaing records with lfoating point numbers or
+containing decimal.
+Marks	No.of Students
+0-1
+2-3
+4-5
+6-7
+8-9
+above 9
+
+Exclusive series is like-
+0-1==============> 0-0.9
+1-2==============> 1-1.9
+2-3
+3-4
+4-5
+5-6
+6-7
+7-8
+8-9
+9-10
+
+
+Valuecounts of pandas give discrete series as o/p.
+
+Types of data in Maths is- 1.Categorical 2. Numerical
+Categorical data- Here we talk about classification or group.
+Numerical is further divided into- Discrete and continuous data.Discrete is a whole no. And continuous can have decimal point.
+
+e.g.no.of students in class cannot be in decimal.This is a type of discrete data. Age or weight can be in decimal.Then its continuous.
+
+Now,when it comes to level of measurement of data,then the 2 differrent ways are- we can measure a data based on quality,which is Qualitative data,and 2, Based 
+on quantity, Quantitative data.
+
+Qualitative is again divided into Nominal and Ordinal data. Que is which season come first?It's a cycle, right. So such kind of data , which is in cyclic form
+is a Nominal data.Ordinal data has specific order.
+
+Quantitative data,can be measured with nos.like, duration or speed. It's divided into interval and ratio. Interval is related to time. Interval w.r.t time.
+In Interval, time duration is fixed.
+Ratio talks about how many. Ratio talks about no.of times.
+
+Criterion to choose sample from a Popuation is it should be in random.If U set is of size N,hen sample size should be N-1.
+
+Measure of Central Tendency-- A single value that represents a group of value. with the help of Mean,Median and Mode.
+
+Mean-or avg is sum of all the observations/(total no.of observation) =>(1+2+3+4+5)/5=3.The story is like-
+The youngest person is 1 year old and eldest is 5 years old and the avg age of people is 3.
+
+the template of story telling is-
+The given data consists of _ observations where the min value is _  and max value is _. The average value of sample data is concentrated around _.
+
+Median- It's the middle value Arange elements is increasing or decreasing order. 12,13,89,45,34,21-> 12,13,21,34,45,89. Now,to cal median,since
+6 values are there, 21 and 34 are central values. (21+34)/2 give median value.,22.5. This is also 50 percentile value. 50% people are below 22.5
+and 50% are above 22.5
+
+Template-
+From the given data, we can conclude that, the given data is concentrated around 22.5, with 50% people are below 22.5 and 50% are above 22.5.
+
+Mode isthe most frequent value.e.g.12,13,89,45,34,21,34----->Mode is 34-->we have more of middle aged people in our sample.
+
+===========================
+What is Data Science----
+Let'ssay I have launched milkbased product targeting age group of let'ssay teen agers., and its not sold thhat much.
+So,I called Data Analyst toknow,wy it'snot selling enough Various teams,marketing team,product team, nutrients team etc. gave their reports. 
+Now,let's say this age group do alot of gyimming and their actual requirement is of protein. So, seelingthe product as protein product will be profitable,
+or else we can change age group of kids.
+
+Now, the data scientist,is understanding business problem and take data driven decision.
+
+Data Scientist knows-compsc,Ml,Maths and Statistics,TraditionalS/w,Data Analysis,Business/Domain expertise.
+
+ML gives computers,ability to learn,without being explicitly programmed.
+
+In traditional programming lang,we give i/p and program as i/p,and logic is given to get o/p.
+but in, ML, we givei/pand o/p as i/p and based on the logic we get program as o/p.
+
+For eg.
+x	y
+1	50
+2	40
+3	30
+4	20
+5	10
+
+i.e. x inversonaly proportional to y.
+
+The relationship between i/p and o/p is understood., and now, we can predict y based on x.
+
+----------
+How ML works..?
+------------
+
+We have many ML algos,wrt classification, wrt regression.
+Dataset->MLalgo->MLModel
+D/b program and model is- programis static ,it cannot chnge itself,but model is self-evolving .
+Now,when a new data is coming,we are checking accuracy and authenticity of model. Applying hyperparametertuning to certain parameters of models,
+my model's performance increased, but this requires human intervention.
+
+-------
+What is ML
+---------
+ML is a semi-automated extraction of knowledge from data.
+
+Knowledge from data means it is your job to extract knowledge from data.Solution exist within data itself.
+Automated extraction- no need of manual calculation till parameter tuning.
+Semi-automated- some decision will be taken by us.
+
+--------
+Types of ML
+---------
+Supervised and Unsupervised Learning.
+
+Supervised learning is Predictive Learning.It is a process of making prediction using labelled input(X) and labelled o/p(Y). The model is trained on i/p and o/p,
+relationship is tried to be established between i/p and o/p.
+
+In unsupervised Learning- we only have i/p but no o/p to train the model.
+
+Now, Supervised is of 2 types-Classification and Regression.
+Classification- In this, we try to predict categorical data. Just like pass and fail based on marks.
+
+x	Y
+i/p	o/p
+Marks	Result
+35	P
+60	P
+10	F
+20	F
+
+Here we are dealing with categorical data.
+
+Now,when it comes to regression, we try to predict the continuous value. In category we canhave many data with repeated category.Like,pass and fail for any marks.
+
+i.e. same categories are repeating multiple times.
+
+But in regression, we can have many unique values.  
+
+x	Y
+i/p	o/p
+Hours	Percentage
+2	35.5
+4	55
+6	75
+7	85
+8	95
+
+i.e we have continuous data in y variable.
+
+Now,in categorical data,we convert category into no. let's say,P=1 f=0.
+
+See intoML for eg.
+
+--------------------------
+Unsupervised Learning
+--------------------------
+It is the processof extracting structures and patterns from unlabeled data. U simply want to group data,let'ssay on the purchase behaviour of customers at a a mall.
+
+And based on the similarity of data we groupthe data.
+
+Now,Earlier, I have only X ,with the helpof unsupervised learning ,Iget categories,i.e. Y, and after getting Xand Y both, I can do classification.
+
+========================
+EDA and Preprocessing
+========================
+Predictive Modelling is the other name of Supervised Learning.
+
+Now,out of these egs.tellmewhich come under Predictive Modelling--?
+1.Movie recommendation System
+2.Factors responsible for Sales reduction
+3.Viewing website's today's traffic
+4.Predicting stock price movement.
+
+Now,what is predictive modelling technique-
+1. Making use of past data and attributes
+2. predict the future using this data.
+
+1. Movie recommendation System- It sees ur past data and based on that it recommends u unwatched movies of that genre. Another logic which is applied is-
+similar interests.
+
+2. Factors responsible for Sales reduction:Here we are analysing the past data.Now,it's not asking me to predict my future sales. It's only asking for factors
+responsible for Sales reduction, This is part of descriptive analytics. And not predictive analysis.
+
+3. Viewing website's today's traffic- Here,weare just monitoring the data. No past data involved,lly,no future prediction.
+
+4.Predicting stock price movement- Analyse past data,also check for similar stocks,once the analyse is done, we wan to predict movement of stock price.Therefore,
+definitely,predictive modelling.
+
+-----------------
+Model Building Life Cycle-
+-------------------------
+
+1. Define problem definition like 1.what would be the sale in next 12 months, 2.whether sales will go up or down. 3.Did we make profit this year.No.of products sold
+this year. 4. Loss this year. 
+2. Hypothesis Generation-i.e. assumptions generation-
+3. Data Collection
+4. DAta exploration to make certain assumptions.This is also known as EDA.
+5. Predictive modelling-data is ready for predictive modelling.
+6. Model deployment
+
+Deployment can be done at godaddy,huruko,github.
+
+-----------------------
+HandlingMissingValues.ipynb
+----------------------------
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import warnings
+warnings.filterwarnings("ignore")
+
+np.nan #Not a Number
+
+data1.csv
+
+____________________
+RealTimeMissingValuesHandling.ipynb
+
+cars.csv
+
+-------------
+
+Homework
+
+--------------
+data2.csv - self created. In hte python col there are 2 different missing values, NaN and missing,In ML,? and missing,In cv ,NaN,missing and ?
+
+In every col, replace these missing values, after replacement change datatype , change to float or int and get the mean value and later fill the missing values with
+mean.
+
+==========================================
+
+Look HomeworkSolution.ipynb for Homework explanation.
+
+-----------------------------
+Now,in sklearn ,there is something called as imputer.
+
+HandlingMissingValuesUsingSklearn.ipynb
+
+==========================================================
+2. Outliers.ipynb
+
+==========================================================
+
+google colab
+
+==========================================================
+
+Skewness and Encoding--------------
+
+===========================================================
+
+Untitled.ipynb
+
+===========================================================
+
+Feature Scaling and Engineerin----------------------
+
+============================================================
+
+EDA and PreProcessing.ipynb
+
+Complete EDA & Preprocessing.ipynb
+
+============================================================
+============================================================
+
+Folder ---Regression---
+
+===========================================================
+1. Introduction to Linear Regression
+--------------------------------------------------------------
+Regression models are ml models and they are very imp models in ml.
+
+What is regression is--
+Regression comes under supervised learning technique where target variable is continuous in nature. In classification problemtarget is categorical in nature.
+In measure of central tendency we try to understand our data based on disperion and different measures like mean,median mode.
+
+Regression is techinique in supervised learning where we predict the
+continuous data
+
+Regression is supervised learning technique where the target variable 
+is continuous in nature
+
+It is a processing for establishing a relationship between
+x & y,
+
+To check for association between 2 variables- there are 4 terms we use-
+1.Co-variance-it helps to understand is there any relationship or association between 2 variables. Value of covariance is between -inf to +inf.
+So, I want to know,how weak or strong the relationship is. Cov cannot ans that. So,for that we have-
+
+2. Correlation- it tells how weak or strong the relationship is.If the value of corr is near 0,it has no corr, and value close to -1 or +1 is strong corr.
+
+3. Linear regression tells given the i/p x, what will be o/p y.
+
+
+LinearRegression
+It is a processing for establishing a relationship between
+x & y, and when the relationship is linear in nature , we call it as
+linearregression.i.e. given the value of x we can tell value of y.
+
+For explaing  linear regre ,explain its-
+def, goal,objective,adv, dadv,performance,regularization,optimization
+Explain LinearRegression
+def -: is a process of establishing relationship between your dependent variable
+and independent variable, and when the relationship is linear in nature we call it as linear regression
+
+goal-: is to create a best-fit line by using the formula
+Y = MX + C
+	where, 
+		Y is dependent variable
+		X is independent variable
+		M is slope/ gradient/ weight/ Coefficient of Regression
+		C is intercept(point where line touches at Yaxis)
+
+M=(X-Xmean)*(Y-Ymean)/sum of (x-xmean)^2-----------explain like in calculations.png
+
+
+Error is difference between the actual value & Predicted Values
+Error of a single point is residual.
+
+Type of errors-
+
+1.Mean abs error,
+2.Mean sq error,
+3.Root mean sq error.
+
+
+Optimization -:
+
+|3-2.8| + |4-3.3| + |2-3.6| + |4-4| + |5-4.4| / 5 =>mae 
+
+(3-2.8)**2 + (4-3.3)**2 + (2-3.6)**2 + (4-4)**2 + (5-4.4)**2 / 5 =>mse ==>0.72
+
+np.sqrt(0.72)==> rmse==>0.84
+
+mse gives exact range of how much data is scattered. Most ofthe time errormatrixthat we will use is mse. Variance have sqred value on y axis.
+So,its not interpretible with respect to x.Therefore, variance and mse are not interpretable on y axis. Where as rmse is interpretable on y axis wrt x axis.
+
+Accuracy rate- of our model tells how good our model is.
+
+Correlation value is given as R,and in terms ofmodel accuracy, we take R^2. Corr value lies between -1 to +1. and R^2 gives value in range 0 to 1.
+
+Look for formula R^2=..in calculations.png,yp is predicted or estimated value. See the table in calculations.png, values 1.6,5.2.,0.30
+Now, when it comes to prediction of case study,or problem we are solving R^2 value can be goodor bad. W.R.T health industry 30% is not good, but for predicting human 
+psychology 30% can be good enough.
+
+R^2 is corr^2 and it is a satistical term which tells that how close the data is from the fitted regression file. In other words,it also measures the accuracy of model.
+
+The value close to one ,is very good model. For human related problem, 0.3 is good enough.
+
+now,in linear regression,we can say,-
+
+objective -:
+	1. is to establish the relationship between x & y
+	2. is to forecaste new observations
+
+adv -: is very easy to interpret
+
+disadv -: highly affected by outliers, missing values & skewness
+
+performance -: we use MAE,MSE, RMSE evaluation of error in model
+		we use R2 score to evaluate how good the model is performing
+
+==================================================
+
+2. Simple Linear Regression----folder---------
+==================================================
+
+LinearRegression.ipynb---------
+
+Y=mx+c is simplelinear regression
+
+
+-------
+SimpleLinearRegression.ipynb
+======================================================
+3. Mulitple Linear Regression-----folder------------
+============================
+Y=m1*x1+m2*x2+m3*x3.........+c
+
+Mulitple Linear Regression.ipynb
+
+========================================================
+4. PolynomialRegression.ipynb------------folder-------
+=======================================================
+
+4 Assumptions of Linear Regression which are applied to any problem that we solve with Linear Regression are--
+
+1. There should be a linear relationship between target and features. 
+Now, how to check this-- u can create scatterplot(), use corr() method on df, or use heatmap()
+
+This is our very first assumption that there is a linear relationship between target and features.
+
+2. Relation between feature and target should be homoskedastic. Homoskedastic means variance between data is constant. 
+Non - constant variance is target and features is hetroskedastic.
+
+3. Residuals should be normally distributed. In the simple regression we plotted this graph.
+
+4. There should be no multi-collinearity i.e.features should not be correlated with each other. Target can be correlated with features.
+
+Polynomial Linear Regression-- This doesnot give straight line but a curvy line
+
+Y=m1*x1+m2^2*x2^2+m3^3*x3^3.........+c
+
+PolynomialRegression.ipynb
+
+Casestudy_on_Regression_(1).ipynb
+
+======================================
+Extra Model Deployment----Folder---------
+=====================================
+
+Front end technologies- html
+learn about flask
+model deployment
+
+
+Download sublime text application from browser.
+
+Create a folder my_try_of_model_deployment->create a folder webapplication
+
+open a notepad . This is the best way to learn about html. Save this file inside webapplication folder as page1.html  .Write Welcome to page1
+
+Go to browser. C:/Users/itvedant/Documents/Parinita/ML/Supervised/Regression/My_try_of_model_deployment/webapplication/page1.html
+
+U will see Welcome to page1 in browser
+
+page1.html----
+
+Welcome to page1
+<h1>Welcome to page1</h1>
+<h2>Welcome to page1</h2>
+<h3>Welcome to page1</h3>
+<h4>Welcome to page1</h4>
+<h5>Welcome to page1</h5>
+<h6>Welcome to page1</h6>
+
+<p>This is Paragraph</p>
+
+<h1><a href="page2.html">For page 2 click me</a></h1>
+
+
+page2.html------------
+
+<h1>Welcome to page 2</h1>
+
+<h1><a href="page1.html">For page 1 click here</a></h1>
+
+--------------
+
+Now,if i want to go to some other website
+
+page2.html-----
+
+<h1>Welcome to page 2</h1>
+
+<h1><a href="page1.html">For page 1 click here</a></h1>
+
+<a href="https://www.amazon.in/">Amazon</a>
+
+-------------
+
+page1.html
+
+Welcome to page1
+<h1>Welcome to page1</h1>
+<h2>Welcome to page1</h2>
+<h3>Welcome to page1</h3>
+<h4>Welcome to page1</h4>
+<h5>Welcome to page1</h5>
+<h6>Welcome to page1</h6>
+
+<p>This is Paragraph</p>
+
+<h1><a href="page2.html">For page 2 click me</a></h1>
+
+<table border=1px>
+	<thead>
+	    <td>Id</td>
+	    <td>Name</td>
+	    <td>Age</td>
+	</thead>
+	<tr>
+	    <td>1</td>
+	    <td>Jay</td>
+	    <td>10</td>
+	</tr>
+	<tr>
+	    <td>2</td>
+	    <td>Ajay</td>
+	    <td>11</td>
+	</tr>
+	<tr>
+	    <td>3</td>
+	    <td>Vijay</td>
+	    <td>10</td>
+	</tr>
+</table>
+
+<h1>Welcome To Registration Page</h1>
+
+<form action="page2.html">
+
+User Name : <input type="text" name="uname" required>
+<br>
+<br>
+Email : <input type="email" email="uemail" required>
+<br>
+<br>
+Password : <input type="password" name="pin" required>
+<br>
+<br>
+<input type="reset">
+<input type="submit">
+
+</form>
+
+-------------
+
+page2.html
+
+<h1>Welcome to page 2</h1>
+
+<h1><a href="page1.html">For page 1 click here</a></h1>
+
+<a href="https://www.amazon.in/">Amazon</a>
+
+<h1>Welcome to Landing Page</h1>
+
+<h1>Thank u for registration</h1>
+
+Now, we are going to create our ml model wrt real_estate.csv file. We will be taking i/p as per the colit has.
+Now,structure of html will be like-- Above is not a complete html file because html file starts and ends with </html>.
+Then there is <head></head> and everything goes <body></body>
+
+
+<html>
+     <head>
+	Name of the file
+  
+     </head>
+     <body>
+	h1
+	p
+	a
+	form
+	table
+     </body>
+
+</html>
+
+
+So,now shifting to sublime text editor.
+
+press <h for getting html code.
+
+If u will see the real_estates data ,it has 5 cols. So we willneed 5 i/ps. So we need to create 5 rows.Now,we will switch to code of page1.html 
+
+Run
+
+C:\Users\itvedant\Documents\Parinita\ML\Supervised\Regression\5. Extra Model Deployment\templates\page1 -------------- on browser.
+
+<div align="center"> gives code in center.
+
+Border came from <fieldset>
+--------------page1.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>House Price Prediction</title>
+</head>
+<body>
+	<div align="center">
+		<fieldset>
+			<h1>Welcome to House Price Prediction Page</h1>
+			<form action="getprediction" method="POST">
+				<table>
+					<tr>
+						<td>Avg Area Income : </td>
+						<td><input type="text" name="aai"></td>
+					</tr>
+
+					<tr>
+						<td>Avg Area House Age : </td>
+						<td><input type="text" name="aaha"></td>
+					</tr>
+
+					<tr>
+						<td>Avg Area No of Rooms : </td>
+						<td><input type="text" name="aanr"></td>
+					</tr>
+
+					<tr>
+						<td>Avg Area No of Bedrooms : </td>
+						<td><input type="text" name="aanb"></td>
+					</tr>
+
+					<tr>
+						<td>Area Population : </td>
+						<td><input type="text" name="ap"></td>
+					</tr>
+
+					<tr>
+						<td><input type="reset"></td>
+						<td><input type="submit"></td>
+					</tr>
+
+				</table>
+			</form>
+
+		</fieldset>
+		
+	</div>
+</body>
+</html>
+
+Now,switching to page2.html-------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prediction Page</title>
+</head>
+<body>
+	<div align="center">
+		<fieldset>
+			<h1>The Price of your Dearm House will be $ {{data}}</h1>
+		</fieldset>
+		
+		<h1><a href="/">House Price Pridiction Page</a></h1>
+	</div>
+
+</body>
+</html>
+
+5.Model Deployment on Flask 
+
+
+Go to folder web development,inside that create a new folder named templates.Keep your templates file page1 and page2 inside that.
+Inside this same location , create a new file, my_app.py.
+
+Now, search idle in windows->open its location->Select IDLE->right click->open filelocation. Goto Scripts folder. Flask is installed at my place.
+
+For you go to address bar, C:\Users\itvedant\AppData\Local\Programs\Python\Python310\Scripts, delete this address and type cmd.
+
+cmd prompt with C:\Users\itvedant\AppData\Local\Programs\Python\Python310\Scripts> pip install flask 
+  
+C:\Users\itvedant\AppData\Local\Programs\Python\Python310\Scripts> pip install numpy
+
+C:\Users\itvedant\AppData\Local\Programs\Python\Python310\Scripts> pip install pandas
+
+C:\Users\itvedant\AppData\Local\Programs\Python\Python310\Scripts> pip install scikit-learn
+--------
+myapp.py
+---------
+from flask import Flask
+
+app=Flask(__name__)
+
+@app.route("/")
+def home():
+    return "<h1>Welcome to Home Page</h1>"
+
+
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+Now,go to C:\Users\itvedant\Documents\Parinita\ML\Supervised\Regression\My_try_of_model_deployment\webapplication, delete this address and type cmd.
+
+C:\Users\itvedant\Documents\Parinita\ML\Supervised\Regression\My_try_of_model_deployment\webapplication>py my_app.py
+
+see the changes.
+
+my_app.py
+---------
+
+from flask import Flask
+
+app=Flask(__name__)
+
+@app.route("/")
+def home():
+    return "<h1>Welcome to Home Page</h1>"
+
+
+@app.route("/aboutus")
+def aboutus():
+    return "<h1>Welcome to About Us</h1>"
+
+
+
+@app.route("/<name>")
+def dynamic(name):
+    return f"<h1>Welcome to {name} page</h1>"
+
+
+
+if(__name__=="__main__"):
+    app.run(debug=True)
+----------
+See the changes http://localhost:5000/Parinita
+
+o/p Welcome to Parinita page
+
+--------------
+
+Now,in my_app.py
+---------------
+
+from flask import Flask,render_template
+
+app=Flask(__name__)
+
+@app.route("/")
+def home():
+    return  render_template("page1.html")
+
+
+
+
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+o/p at localhost:5000
+---------
+page1.html
+
+<div align="center">
+		<fieldset>
+			<h1>Welcome to House Price Prediction Page</h1>=======================>add this line
+
+-------------
+Now,I want after th form 1 is filled,I want to redirect to page 2 which will give me prediction.
+
+But page2 will neeed o/p fromML model--
+
+Create a new file mlmodel.py--------------
+------------------------------------Keep it in the same place as myapp.py and data-- real_estates.csv
+
+import numpy as np 
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+df =pd.read_csv("Real_estates.csv")
+x = df.iloc[:, :-2]
+y = df.iloc[:, -2]
+
+xtrain, xtest, ytrain, ytest = train_test_split(x,y, test_size=0.3, random_state=1)
+
+def mymodel(model):
+    model.fit(xtrain, ytrain)
+    return model
+
+def makeprediction():
+    linreg = LinearRegression()
+    model = mymodel(linreg)
+    return model
+    
+---------------------------------------
+Do following changes in my_app.py
+
+from mymodel import *
+
+and write a getprediction function.
+
+from flask import Flask, render_template, request
+from mlmodel import *
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("page1.html")
+
+@app.route("/getprediction", methods=["POST"])
+def getpredict():
+    aai = request.form['aai']
+    aaha = request.form['aaha']
+    aanr = request.form['aanr']
+    aanb = request.form['aanb']
+    ap = request.form['ap']
+
+    newob = [[aai, aaha, aanr, aanb, ap]]
+    print(newob)
+    model = makeprediction()
+    yp = model.predict(newob)[0]
+    
+    return render_template("page2.html",data=yp)
+    
+
+if(__name__ =="__main__"):
+    app.run(debug=True)
+
+Now, go and add jinja template to page2.html to give the result back to html.
+
+
+====================================================================================
+
+4. Regularization
+
+==================================================================================
+
+In the BiasVarianceTradeoff.png ,we have few graphs .Red is the training data and green is testing data. These are 4 students in our classes.
+
+Now, here we are taking in terms of accuracy and performance.Performance can be judged in terms of performance in classroom and performance in test  or Accuracy-
+
+First student, low classroom performance , low test performance
+
+Second student, high classroom performance , low test performance
+
+Third student, low classroom performance , high test performance
+
+Fourth student, high classroom performance , high test performance
+
+Now.we will draw regression lines , to reprent training and testing.
+
+Student 1 gets a regression line degree 1
+Student 2 gets a regression line degree 2
+Student 3, 
+Student 4 gets idle regression line in terms of accuracy.
+
+Now,in terms of error,
+
+Classroom study is training and Exam is testing.
+
+Training error is Bias. Bias is the difference between actual vlaues and predicted values.
+Testing error is variance. Tells about how scatterd the data is wrt eachother.
+
+Accuracy lowboth in training and testing means high error. i.e. high bias high variance.
+
+Scenario B is Training accuracy is good,i.e. error is low--i.e.  low bias high variance.
+
+Scenario C is More error in Training ,less in test is High bias low variance.
+
+4th is best- low bias low variance.
+
+In ML ,we mmeasure the performance of model in terms of bias and variance.
+
+Now,how bias and varianceare related? understanding with Bull's eye diagram--
+
+Low B , Low V is best. Yellow circle is our target or actual value. And we will measure the performance based on difference beeeeetween  actual value and predicted.
+
+When it ciomes to low variance,data is grouped together,and when it comes toigh variance,data is scattered away from each other.
+
+Low bias Low var means,predicted data is closed to target and low var means,it's grouped.
+
+Low bias High var means, predicted data is closed to target and high var means data is scattered.
+
+High bias Low  var means, predicted data is away from actual values,but grouped.
+
+High bias high var, data away from target and itselfas well.
+
+Low B High V is Overfitting.Eg. Student2.Model is memorizing each and everything. Models trains on noise instead ofsignal.
+
+High B Low V is Underfitting. Eg. Student 3. Model is not learning anything. Makes very weak assumptions for predictions.
+
+---------------
+Bias Variance Tradeoff
+----------------------------------
+
+Overfitting and underfitting all depends on features that we are using in our dataset. We can replace term features with complexity.
+High no.of features means high complexity
+Low no. of features means low complexity.
+
+Now,overfitting has high complexity. Many colsmany features.
+
+Underfitting has low complexity.Trained on less no. of features.
+
+Now, to get rid of overfitting , u must decrease no. of features. And in case of underrfitting, increase no.of cols for training.
+
+--------------------
+Bias-Variance Tradeoff -- show the diag BiasVarianceTradeoff.png
+------------------
+Show bias and  variance line in diag.
+
+Y-axis we have error.
+X-axis complexity.
+
+When complexity is less, bias is more.
+Less Bias, More complexity.
+
+----------------
+L1 And L2 Regularization
+----------------
+
+It is a technique which is used for optimizing your model by adding some penalty terms in ur error function.
+
+But what is Regularization? And howit's related to bias variance trade off.
+
+show the diag BiasVarianceTradeoff.png
+
+Now,u have ur dataset and u split ur dataset into training and testing dataset. 
+Then we train our model on training data and make predictions on testing data.
+
+And regression line is created with the help of slope and intercept where the slope and intercept we got using training data itself.
+
+This regression line should Best Fit ur training data. But this is where the problem lies. It cannot best fit the testing data.
+
+In ML, we want the Best Fit line , which is generalized enough to best predict both training data and testing data.
+
+So, wehave training MSE nd testing MSE.  Show by diag ------------regularization.png
+
+We have low or no error at all for training data. But very high error in testing data. This is the case of overfiiting. Low bias,high variance 
+
+So,what to do now,Now,our MSE value for training data,some error is added to the slope.
+
+Now,consider another scenario., where we add some amount of error in our training data in the formof slope. And then produce a regression line.
+Which is fitting both training and testing data. And by this we can overcome the situation of overfitting.
+
+When it comes to overfiting,we can remove some fetures from data, which are unnecessary and unimportant by checking some multi-collinearity,
+by checking strength of cols.
+And when it comes to underfitting, we need toincrease the cols.
+
+The other method is to add regularization, is a technique by which we tune our model by adding some penalty or external error to  my mse using slope value.
+
+The model knows training data and it tries to best fit it,so we do regularization,to remove some steepness or inclination.
+
+Higherror in training set means high bias and high bias means underfitting.
+
+2 types of Regularization are :1.is L1 regularization or Lasso Regularization.  2. is L2 regularization or ridge regularization.
+
+See for the formula in regularization.png
+
+L1 reg : alpha|mu| is added to mse------- See picture and tell L2 reg : Ridge
+
+alpha is a hyperparameter which can be tuned or changeed by developer.
+
+L1 will minimize the coefficient of unwanted feature to zero.
+
+L2 will minimize the coefficient of unwanted feature to some value but not zero.
+
+e.g. y=15x1+20x2+6x3+5x4+8x5+22x6+c
+
+     L1:15  20 0 0 0 22
+     L2:15  20 3 2 4 22
+
+This reduces the slope.
+
+-------------------------------------------------------------------------------
+
+=============================
+KNN
+==================================
+1.Introduction to KNN
+---------------------------
+
+Regression is a supervisedlearning technique where target variable is continuous or numeric. Regression line helpsus in future prediction.
+
+Today we will see categorical classification. That is dataset is categorized into classes. This is also a supervisedlearning technique where 
+target variable is categorical in nature.. To classify a particular feature into a right class.
+
+The line to differentiate classes, here, is called as hyperplane or decision boundary. In regression we have bestfit line.
+
+eg. Given a insulin record , predict whether the patient has diabetes or not.lly,cancel predicton yes or not. Given the data, Customer will buy the product or not.
+The categories orclasses areyes or no. And the job is to classify given observation into right category.
+
+Predict annuasales of a company is a classification or regression problem? regression because sales is numeric in nature.
+Customer will return the loan or not? classification
+Given the marks schema, I want to know,which grade student belong to? A,B, C,or D--- Classification problem
+Given some features ,predict carat of gold.? Classification
+
+K nearest Neighbour isa classification technique.
+
+knn.png---------------- anew dataset triangle is there.We need to classify it.
+
+It is also a lazy algo,becauseit uses distance formula like eucladiean distance or manhattan distance to classify data.
+It calculates distance between new observation and every other observation in given data.
+U need to choose value of k- i.e. how many nearest neighbours to consider to make prediction.
+if k=3,it will see , to  which class nearest3 neighbors belong to----------------------------------------------------knn1.png
+To which class,majority of nearest data, knn willassign the new data to that class.
+
+So,when it come to classification, we can say that knn works on mode value. i.e. to which class majority of neighbours belong.
+
+Maths behind Knn model----------------------------------------------------------------------------------------knn1.png.See 3 cols in data-python,ml,remark
+
+See the graph next to table,Now new observation x 6 in python 8 ml, is somewhere there in the grph and we want to predict pass or fail.Let's say pass but why?
+
+The distance used here is euclienian distance.----------------knn1.png
+
+Then again in ------------------------------------knn1.png,for k=3  we have to choose 1st 3 shortest distance.
+
+5.3	 1	 1	 3.1	 2
+1	2	3	4	5 student
+faill	pass	pass	fail 	pass
+
+Now,the nearest datapoint from x is 2,3,5 They are pass. 
+Now,prob for x being pass is------knn1.png
+for k=3,3 students are passed wrt 3 nn.Therefore prob of x being pass is 100%
+if k=4,3 students are passed wrt 4 nn.Therefore prob of x being pass is 75%
+if k=5,3 students are passed wrt 3 nn.Therefore prob of x being pass is 60%
+
+So, our new onservation x 6 in python 8 ml is pass.
+
+Implementation of KNN.ipynb---------------------------------------------------------
+
+Social_Network_Ads.csv ----------
+
+This dataset is about a company who has launched a product.The company wants to monitor who allare visiting the copanies website there id, age gender,salary.
+We want to predict the purchase. Purchased col is 0 if customer didnot purchased a product and 1 if purchased.
+
+-------------
+2. EvaluationAndTuningofKNN===========folder===
+------------
+
+Confusion MAtrix.png----------------------------------
+
+There are 200 samples or covid patients.They had test and we got report which gives us value whether patient has covid or not.
+
+
+Predicted  Actual
+0		0
+1		0
+0		1
+1		1
+
+
+Now,we are examining ,whether patient really had covid and what our m/c predicted.
+
+Now, in Implementation of KNN.ipynb,  we got some nos.----
+AV    0  1
+PV0[[59  9]
+  1 [ 8 24]]
+----------
+Type1 and type2 error.
+-----------------
+PV Av
+0  0	True Negative
+1  0	Patient donot have covid ,but model says patient has. False +ve.This is an error.
+0  1	These people in reality have covid,but model predicted No. This is False -ve. This is an error.this false -ve is more dangerous than false +ve,----------
+1  1    True Positive.
+
+And this helps us understand, how our model performed. Weget both error and accuracy from confusion matrix.
+
+True negative+true positive gives accuracy of model.
+False +ve+Flase -ve gives error.
+
+Type 1 error is predicted 1 actual 0
+Type 2 error is predicted 0 actual 1
+
+Type 2 error is more dangerous than 1 based on our data.
+
+Always try to reduce type 2 error.
+
+Type1 error is for eg. when report says a man is pregnant.
+
+And,toa 6months pregnant lady, she is not pregnant.This is type 2 error.
+
+--------
+Classification report--
+--------
+
+See all the formulas of Confusion Matrix.png
+
+If u want to really know or want to evaluate how model performed, check for f1-score.
+If u want to classify real well, check recall value.
+
+-----
+Hyperparameter tuning--
+------
+
+Recall score should ideally be 1 or high for agood clssifier. only be 1 when TP=TP+FN
+Precision score should ideally be 1 or high for agood clssifier. only be 1 when TP=TP+FP
+
+----------
+KNN for Regression.ipynb----------------------------------
+
+Above what we have done is KNN Classification with the help of KNN Classifier.
+Now, if we have regression problem and we want to apply KNN, then apply KNNRegressor
+
+Startups.csv
+
+--------------------------------------------------------------
+
+===========================================
+6. Logistic Regression--------------Folder
+===============================================
+
+1.Introductio To Logistic Regression
+-------------------------------------------------------
+
+
+Although the name is Logistic Regression,it works for Classification problems.To be specific, discrete continuous value.
+
+linear reg formula is y=mx+c,y is dependent variable, m is coeff of regression, and c is intercept.
+
+In case of,logistic regre: we use sigmoid function, See logregi.png
+
+But first understand a smallconcept called odds ratio.Which requires some familiarity with probability.
+
+In the first day,  we lost all 4 matches. 
+second day, we lost 2 matches, and won two.
+third day, won all matches.
+Now,prob of win is=> prob of event=No.of favourable outcome/ total no.of observation.
+
+So,for 3 diff scenarions,prob of win in 1st scenario is= 0/4 =0
+day 2 ,prob of win in 2nd scenario is=2/4=0.5
+day 3,rob of win in 3rd scenario is=4/4=1
+
+Now,odd's ratio help us to derive eqn for sigmoid function.
+
+odds ratio=prob of event that occured/prob of an event that doesnot occured.
+
+if ,p is prob of event that occured,then  (1-p) is prob of an event that doesnot occured.
+
+
+or odds ratio=sucess/failure.
+
+Now, from above matches data wehave data for prob of success, but we still don't have prob for failure.
+
+So, (1-p)=1 for day 1, 0.5 for day2 ,0 for day3
+
+therfore,oddsratio=prob of success/prob of fail
+0/1=0, 0.5/0.5=1, 1/0=infinity
+
+distance nbetw odds ratio is 0--------0.5------------1,which is balanced
+
+odds ratio,distance is 0-------1-------infinity,which is imbalanced.
+
+Therefore we use log of odds value,to makeit balance.
+
+log(0): -infinity
+log(1): zero
+log(infinity): infinity
+
+Now,the scale is balanced. 
+
+---------------------------------------------------
+
+Def of logistic regre-- it is a process of establishing relationship between dependent and independent variable by estimating its underline sigmoid function.
+
+eg. given the weight we need to figure out whether  the patient has diabeties? 1 for yes ,0 for no.
+
+See logregi.png
+
+The o//p we want is 0or1.So we cannot use linear regression.Sowe need to limit the rangeof regression line, from -inf to inf.
+
+So , we can take odds ratio: mx+c=log(p/1-p))
+
+e^(mx+c)=(P/1-P)
+
+See the eqn derivation in logregi.png
+
+Now, the result of logreg is value between 0 and 1.
+
+So, until we seta threshold, we are working on a regression pronblem.
+
+Now, we can set some threshold, like 0.5 , values below 0.5 is 0 and above is 1.
+
+The moment we set threshold, it's a regression problem.
+
+Cost func for logistic regression--
+
+In linear regre we have mse, in logistic reg we have binary cross entropy,also called as logloss.
+
+logregi.png
+
+-ylog(y^)-(1-y)log(1-y^) where y is actual value and y^ is predicted value.
+
+Now, the value ofy is 0 or 1. What if we substitute every value with 0 and substitute in formula.We get, -log(1-y^)
+
+and in case,y=1, we get,-log(y^).Now possible values of y^ is 0 or 1.
+
+if y=0 and y^=0 then,  -log(1-y^) gives 0. Low error
+
+if y=0 and y^=1 then,  -log(1-y^) gives inf.High error
+
+if y=1 and y^=0 then,   -log(y^)  gives inf.High error
+
+if y=1 and y^=1 then,   -log(y^)  gives 0.Low error
+
+-------------
+
+Linear reression vs logistic regression--logregi.png
+
+-----------------
+
+2.Implementation of Logistic Regression
+---------------------------------------
+
+titanic.csv------
+
+We want to build a model with low bias and low variance. There are only 1 % people who have achieved 95% accuracy.and 3% above 84%.
+
+
+------------------------------
+3.ROC-AUC curve:
+Reciever Operator Characteristics-Area under Curve.------------- mm.png,See lecture for notes.
+
+In confusion Matrix - we have 
+TP
+TN
+FP
+FN
+
+Now, TP AND TN means model has truly observed true positive and true negative.
+But , FP means when patient is actually -ve but predicted as +ve.- Type 1 error.
+FN,means when patient is actually +ve but predicted as -ve.- Type 2 error.
+
+Now,Type 1 error is less dangerous then Type 2.
+
+In ROC AUC curve, we need to make sure that,our ML model is sensitive enough to predict ifthe patient is +ve.
+
+We get S shaped curve in case of sigmoid func, plot a graph with 12 data , divide into equal parts, draw a threshold at 50%. 
+All the points above this threshold are +ve and below are -ve.
+Total TP in graph is 4,TN is 5, FP is 1,FN is 2.Now, ROC curve's task is to make our model sensitive enough,so that it predicts, actual +ves as +ves.
+So,we need to shift threshold from 0.5 to 0.3,and to decrease the sensitivity,increase threshold from 0.5 to 0.7 let'ssay.
+
+
+If type2 error is decreased, type1 error will increase.
+
+Increasing sensitivity,specificity decreases. and vice versa. 
+
+====================================================================
+
+Bayes Algorithm-----
+====================================================================
+Naive Bayes classifiers are a collection of classification algorithms based on Bayes’ Theorem.
+
+The fundamental Naive Bayes assumption is that each feature makes an:independent and equal contribution to the outcome.
+
+let's say we have a dataset, features are ‘Outlook’, ‘Temperature’, ‘Humidity’ and ‘Windy’. And the target variable is "Play Golf".
+
+With relation to our dataset, this concept can be understood as:
+
+We assume that no pair of features are dependent. For example, the temperature being ‘Hot’ has nothing to do with the humidity or the outlook being ‘Rainy’ has no effect on the winds. Hence, the features are assumed to be independent.
+Secondly, each feature is given the same weight(or importance). For example, knowing only temperature and humidity alone can’t predict the outcome accurately. None of the attributes is irrelevant and assumed to be contributing equally to the outcome.
+
+Now, before moving to the formula for Naive Bayes, it is important to know about Bayes’ theorem.
+
+Bayes’ Theorem
+
+Bayes’ Theorem finds the probability of an event occurring given the probability of another event that has already occurred. Bayes’ theorem is stated mathematically as the following equation:
+
+
+ P(A|B) = {P(B|A) * P(A)}/{P(B)} 
+
+Where,
+
+P(A|B) is Posterior probability: Probability of hypothesis A on the observed event B.
+
+P(B|A) is Likelihood probability: Probability of the evidence given that the probability of a hypothesis is true.
+
+P(A) is Prior Probability: Probability of hypothesis before observing the evidence.
+
+P(B) is Marginal Probability: Probability of Evidence.
+
+So, the steps applied on our dataset are--
+1. Convert the given dataset into frequency tables.
+2. Generate Likelihood table by finding the probabilities of given features.
+3. Now, use Bayes theorem to calculate the posterior probability.
+
+Now, lets say--
+Problem: If the weather is sunny, then the Player should play or not?
+
+olution: To solve this, first consider the below dataset:
+
+	Outlook		Play
+0	Rainy		Yes
+1	Sunny		Yes
+2	Overcast	Yes
+3	Overcast	Yes
+4	Sunny		No
+5	Rainy		Yes
+6	Sunny		Yes
+7	Overcast	Yes
+8	Rainy		No
+9	Sunny		No
+10	Sunny		Yes
+11	Rainy		No
+12	Overcast	Yes
+13	Overcast	Yes
+Frequency table for the Weather Conditions:
+
+Weather		Yes	No
+Overcast	5	0
+Rainy		2	2
+Sunny		3	2
+Total		10	5
+Likelihood table weather condition:
+
+
+Weather		No		Yes	
+Overcast	0		5		5/14= 0.35
+Rainy		2		2		4/14=0.29
+Sunny		2		3		5/14=0.35
+All		4/14=0.29	10/14=0.71	
+Applying Bayes'theorem:
+
+P(Yes|Sunny)= P(Sunny|Yes)*P(Yes)/P(Sunny)
+
+P(Sunny|Yes)= 3/10= 0.3
+
+P(Sunny)= 0.35
+
+P(Yes)=0.71
+
+So P(Yes|Sunny) = 0.3*0.71/0.35= 0.60
+
+P(No|Sunny)= P(Sunny|No)*P(No)/P(Sunny)
+
+P(Sunny|NO)= 2/4=0.5
+
+P(No)= 0.29
+
+P(Sunny)= 0.35
+
+So P(No|Sunny)= 0.5*0.29/0.35 = 0.41
+
+So as we can see from the above calculation that P(Yes|Sunny)>P(No|Sunny)
+
+Hence on a Sunny day, Player can play the game.
+
+Advantages of Naïve Bayes Classifier:
+Naïve Bayes is one of the fast and easy ML algorithms to predict a class of datasets.
+It can be used for Binary as well as Multi-class Classifications.
+It performs well in Multi-class predictions as compared to the other Algorithms.
+It is the most popular choice for text classification problems.
+Disadvantages of Naïve Bayes Classifier:
+Naive Bayes assumes that all features are independent or unrelated, so it cannot learn the relationship between features.
+Applications of Naïve Bayes Classifier:
+It is used for Credit Scoring.
+It is used in medical data classification.
+It can be used in real-time predictions because Naïve Bayes Classifier is an eager learner.
+It is used in Text classification such as Spam filtering and Sentiment analysis.
+Types of Naïve Bayes Model:
+There are three types of Naive Bayes Model, which are given below:
+
+Gaussian: The Gaussian model assumes that features follow a normal distribution. This means if predictors take continuous values instead of discrete, then the model assumes that these values are sampled from the Gaussian distribution.
+Multinomial: The Multinomial Naïve Bayes classifier is used when the data is multinomial distributed. It is primarily used for document classification problems, it means a particular document belongs to which category such as Sports, Politics, education, etc.
+The classifier uses the frequency of words for the predictors.
+Bernoulli: The Bernoulli classifier works similar to the Multinomial classifier, but the predictor variables are the independent Booleans variables. Such as if a particular word is present or not in a document. This model is also famous for document classification tasks.
+
+
+
+=======================================================================
+7.SVM------------Folder
+=======================================================================
+Just like KNN, SVM can implement both classification and regression. ---------See SVM.png
+
+SVM doesnot gives point but, a range including error margin.--------------SVM.png
+
+In this, the regression line is caled ashyperplane. Apart from hyperplane, we have two more lines, which creates decision boundary.
+The points within this decision boundary or wich lies in this decision boundary,will be ignored and are considered inside error margin, will not be treated as error.
+
+These boundaries are created using support vectors. Where, support vectors are nothing but points inside dataset itself.
+
+SVM.png
+
+SVM using support vectors , which are data points of the classes.Using these support vectors,wewill be creating boundary lines, and using these boundary lines,
+we will create hyperplane.
+
+SVM has kernel functions,which map datapoints into higher dimension subspace.
+
+See SVM.png for definitions.
+
+
+-----------------------
+2.Tuning of SVM--------------
+--------------------------
+
+Kernelsin SVM- Kernel function is used to map the lower dim data into higher dims. There are many kernelsin SVM,like-
+Linear Kernel, Polynomial Kernel,sigmoid kernel, rbf kernel.
+
+Earlier we have seen linearly seperable data,which can be easily seperated by a linearr line.
+
+Draw---------- a line ,mark 2 points red, 2 points blue,2 points red. Now, this data is not linearly seperable.Since we have only 1 hyperplane ,which is unable
+to divide this kind of data.
+
+Here,we only have 1 d, now polynomial kernel,will map lower dim data into higher dim, i.e. 2-D.
+
+Now, when it comes to ploynomial, 
+
+x dim is x but y dimis x^2. So if we do this,we get a curve line, plot these points.Now, we  can easily divide the data
+
+In 1-D, hyperplane is a point, in 2-d, it is a line,3 d ,hyperplane is a plane.
+
+Radial basis kernel or rbf, which is a default kernel in python,instead of transforming it into higher dim, it creates a circular hyperplane.
+
+Now, Regularization we studied earlier where we add some external error to bal the scores of bias and variance, in the same way, we have ,hard margin and soft margin.
+
+hard margin, soft margin- Hard margin, dividing classes based on training data, without thinking about where my test data will lie,so training data will give perfect
+
+classification , but at the time of testing, it will give some amount of misclassification. And this is an eg of hard margin.
+
+Now, if we allow some amount of error in my data,my testing accuracy would be great. And this hyperplane is soft margin.
+
+Advance Concepts of SVM.ipynb----------------------
+
+C and Gamma---
+
+Grid Search CV-------
+
+=======================================
+8.Decision Tree------------------------------------ Folder
+=======================================
+
+1.Introduction to Decision Tree
+
+Decision Tree--------------------------------dt1.png
+
+see 2nd picture, 2 decision boundaries or hyperplane are helping us decide , we are creating multiple decision boundaries or multiple hyper planes, in order to
+fit our data well.
+
+Decision tree is the arrangement of data in tree structure,where at each node data is seperated to different branches,based on features of dataset,
+branches represent the decision rules and each leaf node represents the outcome.
+
+Decision tree creates multiple decision boundaries, or hyperplane, based on multiple features in order to classify your data without having more impurities.
+
+
+Working of Decision Tree------------ explaining with real life eg.
+
+dt1.png----------------------------- see movie review graph-- like by age gender diagram.
+
+The root node or parent node contains all the data prior to splitting. The nodes are splitted into splitting criterion into 2 branches.See in picture.
+Nodes which are used for splitting are decision nodes and each leaf node represents the outcome which can be continuous or contiguous.
+
+
+Decision tree try to categorize data purely. Now,whenever u categorize your data point, keep into consideration, that if we are creating a hyperplane, then how, pure
+or impure my category is.and gowith the hyperplane which has less impurity.
+
+
+CaseStudy on DecisionTree.ipynb--------------------------------
+
+So we need to calculate the purity in decision tree.2 criterions are- 1.Gini index. 2. Entropy
+
+1.Gini index------dt1.png 1-p^2-q^2  : p is the prob of win and q is the prob of loss. 
+
+2. Entropy-------- -plpog(p)-qlog(q)
+
+Now, both gini index and entropy gives criterion for calculating information gain to split  the node where information gain is- 
+entropy of parent node - sum of the weighted entropies of child node.
+
+dt1.png--------------------------------movie eg.
+
+p is the prob of people who liked the movie, and q who disliked the movie. In males 100% liked the movie. therefore, p=1 and dislike the movie=0.
+Coming to female,out of 6 datapoints, we have 2 data points who liked the movie. prob(p)=2/6.So, 1-(2/6)^2-(4/6)^2=1-4/36-16/36=1-20/36=4/9.
+But, we want to calculate impurity for gender col, because we want to build a hyperplane for gender col,not male female. 
+
+Now,calculating weighted sum----, if we see,there are 12 data points in total, and 6 belong to male i.e. 6/12 and 6 to female i.e. 6/12. Now, for male we have got the
+gini impurity as 0 and for female, 4/9, tf, 6/12*0+6/12*4/9== 0+2/9=0.22========= this is the level of impurity for gender.
+We need to do same thing for age as well--------------dt1.png
+
+age<20 and age>20------age hyperplane divides data into 2 parts. 1 region has 4 data points,2nd has 8 data points. <20, 2 people who liked the movie, including 
+male and female,6/8 people liked the movie and 2/8 people who disliked the movie=>1-6/8-2/8=3/8
+
+Now, for <20, 4/12 and >20, 8/12 impurity for <20 is 1/2 and >20 is 3/8. ---------td1.png---see the box------- =0.41
+
+We have two hyperplanes, impurity level in gender is 0.22 and age is 0.41. Which hyperplane should we create first------- because of lesser impurity.
+
+dt1.png---------------------------------explain maxdepth--of leaf node----- i.e. how many levels of leaf node i want.
+
+Now, there  are chances of overfitting text data.So by max depth,I can prune our tree.i.e. i can control length of tree using max_depth parameter.
+
+lly, for controlling width i.e. branches of tree,parameter is min_samples_leaf. and gini index and entropy are criterion.
+
+----------------------------------Folder 9.RandomForest------------------
+
+DecisionTreeandRandomForestClassifier.ipynb
+
+In decision tree algorithm, we give all the data to our decision tree algorithm at once. It is a single tree.
+In random forest,it is multiple decision trees. We split complete data into small samples.This small sampleis then taken to train tree.
+Not only with data,u can do a subset selection of fetures too and train our data on that. Goon selecting samples and train decision tree .Here,
+there might be achance that,data points are repeating in different samples.Let's say, u build 4 sample trees,  3 trees predicted yes and 1 tree predicted 
+No, then we do voting, and max no.of votes win.
+ 
+---------------------------------Folder - 10.Boosting Algorithms------------------
+Can be used for both regression and classification.
+
+In a random forest algorithms, all the trees are trained parallely and have no effect on each other
+While in a boosting algorithm,we a take a sample and train a tree based model, Now, this tree willdosome misclassifications.
+So on the basis of those misclassifications,the next sample is taken and it tries,to classify above misclassifications correctly.
+And this continues.
+That is,the training is done sequentially,wherre each and every modelis trying to fix the error done by previous tree.
+This procedure is continued and models are added until either the complete training data set is predicted correctly or the maximum number of models are added. 
+
+
+1Initialise the dataset and assign equal weight to each of the data point.
+2Provide this as input to the model and identify the wrongly classified data points.
+3Increase the weight of the wrongly classified data points.
+4if (got required results) 
+  Goto step 5 
+else 
+  Goto step 2 
+ 
+5End
+
+Different typesof boosting Algorithms-
+1. Adaptive boosting-AdaBoost
+2. Gradient boosting
+3. Extreme gradient boosting or (XG boost) 
+
+XGBoost is one of the favourite algorithms for many data scientists and many kaggle competitions are won with the help of this algorithm.
+
+1. ADA Boost--
+Here, sequential training only is done, but the models are not fully grown decision trees,instead we use a decision stump.
+Where, a decision stump is a decision tree with just root node and 1 split, i.e. 2 leaves.
+What this algorithm does is that it builds a model and gives equal weights to all the data points. It then assigns higher weights to points that are wrongly classified. 
+Now all the points which have higher weights are given more importance in the next model. It will keep training models until and unless a lowe error is received.
+
+See video for example https://drive.google.com/drive/u/1/folders/1Sj_S2sscdusrR9b0byFSprk7NrhW4M43
+
+https://www.analyticsvidhya.com/blog/2021/09/adaboost-algorithm-a-complete-guide-for-beginners/ ----------------------for eg. reference
+
+Lets say 5 data points are there.... weight of each is 1/5.
+Let'ssay,1st model classified 3 out of 5 data points correctly. Then,
+Misclassification rate=2/5 =0.4
+and stage =ln((1-mrate)/mrate)=ln((1-0.4)/0.4)=ln(0.6/0.4)=0.4
+
+Now, calculating new weights, wnew=wold*e^stage--->e^0.4=1.49
+wold of each data point=>1/5=0.2. Therefore, 0.2*1.49==>0.29
+
+Therefore, now the properly classified datapoint have weight of 0.2, while misclassified datapoints have 0.29 weights.
+
+Now, if we add previous weights, total is 1. But now adding,0.2=0.2+0.2+0.29+0.29=1.18
+But we cannot have total weight>1. Therefore,we needto normalize all the weights. THerefore divide all the weights by 1.18.
+
+0.2/1.18===0.16, and 0.29/1.18===0.24
+Now, adding 0.16+0.16+0.16+0.24+0.24=1....Now,even after normaliztion, the weights of correctly classified values have decreased, but misclassified are increased.
+
+Now,u don't have to remember these formulas. BUt understanding the concept.
+
+In adaboost algo, we train decision stump which is 1 root node and 2 leaf nodes,and these stumps are trained sequentially.Where each and every stump tries to
+fix the misclassifcation done by previous stump.
+
+1 st iteration,mrate=0.4, stage=0.4
+2nd iteration ,lets say only 1 point got misclassified ,then mrate=1/5=0.2
+and stage =ln((1-mrate)/mrate)=ln((1-0.2)/0.2)=ln(0.8/0.2)=1.3
+i.e.:
+stage value is inversely proportional to the misclassification rate.
+
+The other use of stage value is, in random forest,where o/p given by each decision tree is important .
+But in adaboost, 1st tree has very high misclassification,so low stage value.2nd tree has high stage value.Now, more weightage is given to that stump which has
+higher stage value.
+
+AdaBoostClassifier.ipynb---------------------------
+
+bank.csv--------------------------https://www.kaggle.com/c/bank-marketing-uci
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
