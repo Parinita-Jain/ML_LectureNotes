@@ -322,6 +322,16 @@ HandlingMissingValuesUsingSklearn.ipynb
 ==========================================================
 2. Outliers.ipynb
 
+!pip install plotly
+import plotly.express as px
+t=px.data.tips()
+fig=px.box(target)
+fig.show()
+
+t=px.data.tips()
+fig=px.box(features,x=target,y="make")
+fig.show()
+
 ==========================================================
 
 google colab
