@@ -348,6 +348,21 @@ Untitled.ipynb
 
 Feature Scaling and Engineerin----------------------
 
+The choice between MinMaxScaler and StandardScaler depends on the specific characteristics of your data and the requirements of your machine learning algorithm. Here's a general guideline:
+
+MinMaxScaler:
+
+Use MinMaxScaler when you want to scale features to a specific range, typically between 0 and 1.
+It is useful when you have features with different units and scales, and you want to preserve the relative relationships between feature values.
+MinMaxScaler is sensitive to outliers, so if your dataset contains outliers, they can affect the scaling of the entire dataset.
+It is suitable for algorithms that require input features to be within a bounded range, such as neural networks and algorithms based on distance metrics like K-nearest neighbors.
+StandardScaler:
+
+Use StandardScaler when you want to standardize features by removing the mean and scaling to unit variance.
+It is useful when the distribution of your features is approximately Gaussian (normal distribution) and when you want to center the data around 0 with a standard deviation of 1.
+StandardScaler is less affected by outliers compared to MinMaxScaler because it uses the mean and standard deviation, which are less sensitive to outliers.
+It is suitable for algorithms that assume normally distributed features or when the algorithm benefits from centered and scaled features, such as linear regression, logistic regression, and support vector machines.
+
 ============================================================
 
 EDA and PreProcessing.ipynb
