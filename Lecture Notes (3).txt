@@ -415,6 +415,312 @@ is continuous in nature
 It is a processing for establishing a relationship between
 x & y,
 
+Ordinary Least Squares (OLS) is a method used in linear regression to estimate the parameters (coefficients) of a linear model by minimizing the sum of the squared differences between the observed and predicted values. In other words, it finds the line (or hyperplane in higher dimensions) that best fits the data points in terms of minimizing the overall squared errors.
+
+Here's how the OLS method works:
+
+Define the Model: Specify the linear relationship between the independent variables (features) 
+�
+X and the dependent variable (target) 
+�
+y as 
+�
+=
+�
+0
++
+�
+1
+�
+1
++
+�
+2
+�
+2
++
+…
++
+�
+�
+�
+�
++
+�
+y=β 
+0
+​
+ +β 
+1
+​
+ X 
+1
+​
+ +β 
+2
+​
+ X 
+2
+​
+ +…+β 
+n
+​
+ X 
+n
+​
+ +ϵ, where 
+�
+�
+β 
+i
+​
+  are the coefficients, and 
+�
+ϵ is the error term.
+
+Calculate Predictions: Use the model to predict the target variable for each observation by multiplying the features by their corresponding coefficients and summing them up.
+
+Compute Residuals: Calculate the residuals, which are the differences between the observed and predicted values.
+
+Minimize the Residual Sum of Squares (RSS): Adjust the coefficients to minimize the sum of the squared residuals, typically using optimization techniques like gradient descent or the normal equation.
+
+Estimate Coefficients: Once the optimization process is complete, the estimated coefficients represent the best-fitting linear relationship between the features and the target variable.
+
+Linear regression is a broader term that encompasses various methods for fitting a linear model to data, including Ordinary Least Squares (OLS), ridge regression, LASSO, and elastic net regression, among others. OLS is just one specific method within the linear regression framework.
+
+We use linear regression instead of referring specifically to OLS because:
+
+Flexibility: Linear regression covers a range of techniques beyond just OLS, allowing for more flexibility in model fitting and regularization.
+
+Regularization: In addition to OLS, linear regression techniques like ridge regression and LASSO provide regularization to prevent overfitting and improve generalization performance.
+
+Robustness: Linear regression methods may offer improvements over OLS in terms of robustness to outliers and multicollinearity.
+
+Complexity: Linear regression can handle more complex scenarios, such as multiple regression with interactions or polynomial regression, beyond the simple linear model handled by OLS.
+
+Overall, while OLS is a fundamental method in linear regression, the term "linear regression" encompasses a broader set of techniques that offer advantages beyond OLS in certain situations.
+
+
+User
+Explain above with mathematical example
+ChatGPT
+Sure, let's dive into a mathematical example to illustrate Ordinary Least Squares (OLS) regression.
+
+Suppose we have a dataset with one independent variable (feature) 
+
+X and one dependent variable (target) 
+
+y. Our goal is to fit a linear regression model to this data using the OLS method.
+
+Here's a step-by-step explanation:
+
+Step 1: Define the Model
+We start by defining our linear model:
+
+�
+=
+�
+0
++
+�
+1
+�
++
+�
+y=β 
+0
+​
+ +β 
+1
+​
+ X+ϵ
+
+Where:
+
+�
+y is the dependent variable (target).
+�
+X is the independent variable (feature).
+�
+0
+β 
+0
+​
+  is the intercept (constant term).
+�
+1
+β 
+1
+​
+  is the coefficient for the independent variable 
+�
+X.
+�
+ϵ represents the error term (residuals).
+Step 2: Calculate Predictions
+We use the linear model to predict the target variable 
+�
+y for each observation in our dataset. The predicted value (
+�
+^
+y
+^
+​
+ ) for a given observation is calculated as:
+
+�
+^
+�
+=
+�
+0
++
+�
+1
+�
+�
+y
+^
+​
+  
+i
+​
+ =β 
+0
+​
+ +β 
+1
+​
+ X 
+i
+​
+ 
+
+Where:
+
+�
+^
+�
+y
+^
+​
+  
+i
+​
+  is the predicted value for observation 
+�
+i.
+�
+�
+X 
+i
+​
+  is the value of the independent variable for observation 
+�
+i.
+Step 3: Compute Residuals
+Next, we calculate the residuals, which are the differences between the observed target values and the predicted values:
+
+Residual
+�
+=
+�
+�
+−
+�
+^
+�
+Residual 
+i
+​
+ =y 
+i
+​
+ − 
+y
+^
+​
+  
+i
+​
+ 
+
+Where:
+
+Residual
+�
+Residual 
+i
+​
+  is the residual for observation 
+�
+i.
+�
+�
+y 
+i
+​
+  is the observed target value for observation 
+�
+i.
+�
+^
+�
+y
+^
+​
+  
+i
+​
+  is the predicted value for observation 
+�
+i.
+Step 4: Minimize the Residual Sum of Squares (RSS)
+The OLS method aims to minimize the sum of the squared residuals (RSS). We adjust the coefficients 
+�
+0
+β 
+0
+​
+  and 
+�
+1
+β 
+1
+​
+  to minimize the following cost function:
+
+Cost
+=
+∑
+
+=
+1
+
+(Residual)
+2
+Cost=∑ 
+i=1
+n
+​
+ (Residual 
+i
+​
+ ) 
+2
+ 
+
+Where:
+n is the number of observations.
+Step 5: Estimate Coefficients
+
+
+
+
+
+
+
+
 To check for association between 2 variables- there are 4 terms we use-
 1.Co-variance-it helps to understand is there any relationship or association between 2 variables. Value of covariance is between -inf to +inf.
 So, I want to know,how weak or strong the relationship is. Cov cannot ans that. So,for that we have-
