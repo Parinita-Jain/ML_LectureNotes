@@ -363,6 +363,29 @@ It is useful when the distribution of your features is approximately Gaussian (n
 StandardScaler is less affected by outliers compared to MinMaxScaler because it uses the mean and standard deviation, which are less sensitive to outliers.
 It is suitable for algorithms that assume normally distributed features or when the algorithm benefits from centered and scaled features, such as linear regression, logistic regression, and support vector machines.
 
+Feature engineering is the process of creating new features or modifying existing ones from raw data to improve the performance of machine learning models. It involves transforming the input data into a format that is more suitable for the algorithms being used. Some common techniques in feature engineering include:
+
+Imputation: Handling missing values by replacing them with a meaningful value (e.g., mean, median, or mode) or using more advanced methods such as interpolation or predictive imputation.
+
+One-Hot Encoding: Converting categorical variables into numerical representations by creating binary columns for each category.
+
+Normalization/Standardization: Scaling numerical features to a similar range, such as [0, 1] (Normalization) or standardizing them to have a mean of 0 and a standard deviation of 1 (Standardization).
+
+Feature Scaling: Ensuring that all features have similar scales to prevent some features from dominating others during model training.
+
+Feature Extraction: Creating new features from existing ones by performing mathematical operations (e.g., adding, subtracting, multiplying, or dividing), combining features, or applying domain-specific knowledge.
+
+Dimensionality Reduction: Reducing the number of features by selecting the most relevant ones or transforming them into a lower-dimensional space using techniques such as Principal Component Analysis (PCA) or t-Distributed Stochastic Neighbor Embedding (t-SNE).
+
+Binning/Discretization: Grouping numerical values into bins or discrete intervals to simplify complex data distributions or to handle outliers.
+
+Text Processing: Converting text data into numerical representations using techniques such as Bag-of-Words, TF-IDF (Term Frequency-Inverse Document Frequency), or word embeddings like Word2Vec or GloVe.
+
+Date/Time Features: Extracting useful information from date and time data, such as day of the week, month, or year, or calculating time differences between events.
+
+Interaction Features: Creating new features by combining existing ones through multiplication or other mathematical operations to capture interactions between them.
+
+Effective feature engineering can significantly impact the performance of machine learning models and is often as important as the choice of the algorithm itself.
 ============================================================
 
 EDA and PreProcessing.ipynb
