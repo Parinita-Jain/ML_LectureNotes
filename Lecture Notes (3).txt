@@ -504,6 +504,26 @@ M=(X-Xmean)*(Y-Ymean)/sum of (x-xmean)^2-----------explain like in calculations.
 Error is difference between the actual value & Predicted Values
 Error of a single point is residual.
 
+
+  (R-squared) and RSS (Residual Sum of Squares) are both metrics used to evaluate the performance of regression models, but they capture different aspects of model fit.
+
+
+  (R-squared):
+
+ R^2 represents the proportion of variance in the dependent variable (
+ that is explained by the independent variables (features) in the regression model.
+It ranges from 0 to 1, where 0 indicates that the model does not explain any of the variance in the dependent variable, and 1 indicates that the model explains all of the variance.
+Mathematically, R^2 = 1-RSS/TSS
+
+TSS is the Total Sum of Squares (sum of squares of deviations of observed values from their mean).
+RSS (Residual Sum of Squares):
+RSS quantifies the amount of unexplained variance in the dependent variable by the regression model.
+It measures the discrepancy between the observed values (
+
+Lower values of RSS indicate a better fit of the model to the data.
+
+  provides an overall measure of the goodness of fit of the regression model by indicating the proportion of variance explained, while RSS quantifies the amount of unexplained variance in the dependent variable.
+
 Type of errors-
 
 1.Mean abs error,
