@@ -420,63 +420,7 @@ Ordinary Least Squares (OLS) is a method used in linear regression to estimate t
 Here's how the OLS method works:
 
 Define the Model: Specify the linear relationship between the independent variables (features) 
-�
-X and the dependent variable (target) 
-�
-y as 
-�
-=
-�
-0
-+
-�
-1
-�
-1
-+
-�
-2
-�
-2
-+
-…
-+
-�
-�
-�
-�
-+
-�
-y=β 
-0
-​
- +β 
-1
-​
- X 
-1
-​
- +β 
-2
-​
- X 
-2
-​
- +…+β 
-n
-​
- X 
-n
-​
- +ϵ, where 
-�
-�
-β 
-i
-​
-  are the coefficients, and 
-�
-ϵ is the error term.
+
 
 Calculate Predictions: Use the model to predict the target variable for each observation by multiplying the features by their corresponding coefficients and summing them up.
 
@@ -517,210 +461,15 @@ Here's a step-by-step explanation:
 Step 1: Define the Model
 We start by defining our linear model:
 
-�
-=
-�
-0
-+
-�
-1
-�
-+
-�
-y=β 
-0
-​
- +β 
-1
-​
- X+ϵ
-
-Where:
-
-�
-y is the dependent variable (target).
-�
-X is the independent variable (feature).
-�
-0
-β 
-0
-​
-  is the intercept (constant term).
-�
-1
-β 
-1
-​
-  is the coefficient for the independent variable 
-�
-X.
-�
-ϵ represents the error term (residuals).
-Step 2: Calculate Predictions
-We use the linear model to predict the target variable 
-�
-y for each observation in our dataset. The predicted value (
-�
-^
-y
-^
-​
- ) for a given observation is calculated as:
-
-�
-^
-�
-=
-�
-0
-+
-�
-1
-�
-�
-y
-^
-​
-  
-i
-​
- =β 
-0
-​
- +β 
-1
-​
- X 
-i
-​
- 
-
-Where:
-
-�
-^
-�
-y
-^
-​
-  
-i
-​
-  is the predicted value for observation 
-�
-i.
-�
-�
-X 
-i
-​
-  is the value of the independent variable for observation 
-�
-i.
 Step 3: Compute Residuals
 Next, we calculate the residuals, which are the differences between the observed target values and the predicted values:
 
 Residual
-�
-=
-�
-�
-−
-�
-^
-�
-Residual 
-i
-​
- =y 
-i
-​
- − 
-y
-^
-​
-  
-i
-​
- 
 
-Where:
-
-Residual
-�
-Residual 
-i
-​
-  is the residual for observation 
-�
-i.
-�
-�
-y 
-i
-​
-  is the observed target value for observation 
-�
-i.
-�
-^
-�
-y
-^
-​
-  
-i
-​
-  is the predicted value for observation 
-�
-i.
 Step 4: Minimize the Residual Sum of Squares (RSS)
-The OLS method aims to minimize the sum of the squared residuals (RSS). We adjust the coefficients 
-�
-0
-β 
-0
-​
-  and 
-�
-1
-β 
-1
-​
-  to minimize the following cost function:
+The OLS method aims to minimize the sum of the squared residuals (RSS). 
 
-Cost
-=
-∑
-
-=
-1
-
-(Residual)
-2
-Cost=∑ 
-i=1
-n
-​
- (Residual 
-i
-​
- ) 
-2
- 
-
-Where:
-n is the number of observations.
 Step 5: Estimate Coefficients
-
-
-
-
-
-
-
-
 To check for association between 2 variables- there are 4 terms we use-
 1.Co-variance-it helps to understand is there any relationship or association between 2 variables. Value of covariance is between -inf to +inf.
 So, I want to know,how weak or strong the relationship is. Cov cannot ans that. So,for that we have-
@@ -781,7 +530,8 @@ Look for formula R^2=..in calculations.png,yp is predicted or estimated value. S
 Now, when it comes to prediction of case study,or problem we are solving R^2 value can be goodor bad. W.R.T health industry 30% is not good, but for predicting human 
 psychology 30% can be good enough.
 
-R^2 is corr^2 and it is a satistical term which tells that how close the data is from the fitted regression file. In other words,it also measures the accuracy of model.
+R^2 is corr^2 and it is a satistical term which tells that how close the data is from the fitted regression file. 
+In other words,it also measures the accuracy of model.
 
 The value close to one ,is very good model. For human related problem, 0.3 is good enough.
 
@@ -799,6 +549,7 @@ performance -: we use MAE,MSE, RMSE evaluation of error in model
 		we use R2 score to evaluate how good the model is performing
 
 ==================================================
+
 
 2. Simple Linear Regression----folder---------
 ==================================================
