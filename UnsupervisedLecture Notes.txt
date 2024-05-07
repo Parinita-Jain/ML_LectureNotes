@@ -1,0 +1,495 @@
+h
+D/B supervised and unsupervised learning-
+The target data is not labeled in unsupervised learning. But in supervised learning, target is labelled.
+Both regression and classification comes under Supervised learning.
+
+The unsupervised learning algorithms are-
+Clustering-- Points close form clusters. The cluters create a groupof data with the help of which,a labelled data is created.
+Two widely used techniques are Kmeans clustering and hierarchical clustering.
+
+1.Kmeans Clusteing:- Here the value k stands for no. of clusters.
+Let's say there are datapoints distributed in such a way,that there are 2 clusters.Now, because there are two clusters, take 2 centeroids.
+Now,calc distance of each centeroid from these data points. This distance canbe calculated with the helpof euclidean distance or manhattan distance.
+This is itertion no. 1.
+Now,next what will happen is centeroids willnow try to shift tothe center of the cluster. And we will have new location of centeroids.
+Then, we will repeat above steps again.And will continue till data points reassignment is no more required. We have external loop also for random
+assignments of centeroids.
+
+https://drive.google.com/drive/u/0/folders/1YNR7Exl_YW-m6hgY2lBClLmJ6_HPgf5E
+
+Now,to select which clustering is better , we see variance within the cluster and variance between the cluster.Within should be low, between should be high,
+.This is the property for selecting good cluster.
+
+
+The variance within - is alsoknown as Inertia or Within Cluster sum of squares or Inter Distance. This should be low.
+The variance between is Intra distance and this should be high.
+
+
+1.Consider 4 data points A,B,C,D as below
+
+
+	x1	x2
+A	2	3
+B	6	1
+C	1	2
+D	3	0
+
+2. Choose two centroids AB and CD, calculated as
+
+AB = Average of A, B=(2+6)/2=4 , (3+1)/2=2
+
+CD = Average of C,D=(1+3)/2=2 ,  (2+0)/2=1
+
+		X1	x2
+
+Centeroid AB	4	2
+
+Centeroid CD	2	1
+
+3. Calculate squared euclidean distance between all data points to the centroids AB, CD. For example distance between A(2,3) and AB (4,2) 
+can be given by s = (2–4)² + (3–2)².
+
+AB=avg of A and B
+CD=avg of C and D
+
+		A	B	C	D
+Centeroid AB	5	5	9	5
+
+Centeroid CD	4	16	2	2
+
+
+A is very near to CD than AB
+
+4. If we observe in the fig, the highlighted distance between (A, CD) is 4 and is less compared to (AB, A) which is 5. 
+Since point A is close to the CD we can move A to CD cluster.
+
+5. There are two clusters formed so far, let recompute the centroids i.e, B, ACD similar to step 2.
+
+ACD = Average of A, C, D= (2+1+3)/3=2 , (3+2+0)/3=1.67
+
+B = B = 6,1
+
+6. As we know K-Means is iterative procedure now we have to calculate the distance of all points (A, B, C, D) to new centroids (B, ACD ) similar to step 3.
+
+		A	B	C	D
+Centeroid B	20	0	26	10
+
+Centeroid ACD	1.78	16.44	1.11	3.78
+
+7. In the above picture, we can see respective cluster values are minimum that A is too far from cluster B and near to cluster ACD. 
+All data points are assigned to clusters (B, ACD ) based on their minimum distance. The iterative procedure ends here.
+
+8. To conclude, we have started with two centroids and end up with two clusters, K=2.
+
+Now selecting best value ofk:- Elbow method is used.
+
+Univ--- contains names of diff US based univs.
+
+State---in wich state this univ is present
+
+SAT score---score needed to get into this univ
+
+Top10--how many times this univ has comeunder top 10.
+
+Accept caN BE RELATED to acceptance ratio
+
+SFRatio-- student faculty ratio
+
+Expenses -- expense to graduate from that univ
+
+Grad rate--at what rate graduations are happening i.e. out of 100 how many students graduate. 
+
+ 
+
+Clustering.ipynb---------------------------------------------------------------
+
+plt.figure(figsize=(10,7))
+plt.title('Clusters')
+plt.xlabel('X1')
+plt.ylabel('Y1')
+plt.scatter(x[y_kmeans==0,0],x[y_kmeans==0,1],s=100,c='red',label='Cluster1')
+plt.scatter(x[y_kmeans==1,0],x[y_kmeans==1,1],s=100,c='yellow',label='Cluster2')
+plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],s=100,c='green',label='Cluster3')
+plt.scatter(kmeans.cluster_centers_[:,0],kmeans.cluster_centers_[:,1],s=400,c='magenta',label='Centroid')
+plt.legend()
+plt.show()
+
+-------------------------
+
+Hierarchical_Clustering.ipynb----- hierarchy of clusters.-----10.webm
+
+---for seaborn.ipynb--------------------------------------
+
+https://www.kaggle.com/code/shubhamsinghgharsele/exploratory-data-analysis-on-automobile-dataset
+
+# following are the attriputer that show positive correlation
+
+plt.figure(figsize = (12,8))
+
+sns.heatmap(auto_df.corr(),annot = True, cmap='Blues', mask = (auto_df.corr() <= 0.7 ))
+plt.show()
+
+
+# following are the attriputer that show negative correlation
+
+plt.figure(figsize = (12,8))
+
+sns.heatmap(auto_df.corr(),annot = True, cmap='Blues', mask = (auto_df.corr() >= 0 ))
+plt.show()
+
+----------------------------------
+
+Hierarchical clustering---------------
+
+---------------------------------------
+
+In hierarchical clustering each and every data point will measure it's distance from the other data point. Here we donot have any concept of centeroid.
+
+-**draw some point and see which data points are closer. Cluster near data points and create dendogram.
+The dendogram helps in creating clusters. Draw a horizontal line on dendograms , to decide how many clusters we want to form.
+The two types of hierarchical clustering are Agglomerative clustering- means bottom up approach
+2nd is Divisive Clustering, -top to bottom approach. i.e. We keep on dividing big cluster into smaller clusters.
+
+Now, which is better? Kmeans or hierarchical? It totally depends.
+
+Hierarchical_Clustering.ipynb----
+
+-------------------------------------------
+PCA----------------------------------------16.webm
+-------------------------------------------
+
+PCA - Principal Component Analysis.
+
+The Principal Component Analysis is a popular unsupervised learning technique for reducing the dimensionality of data. 
+It increases interpretability yet, at the same time, it minimizes information loss. 
+It helps to find the most significant features in a dataset and makes the data easy for plotting in 2D and 3D.
+PCA helps in finding a sequence of linear combinations of variables.
+
+https://www.simplilearn.com/tutorials/machine-learning-tutorial/principal-component-analysis
+
+What is a Principal Component?
+The Principal Components are a straight line that captures most of the variance of the data. 
+They have a direction and magnitude. Principal components are orthogonal projections (perpendicular) of data onto lower-dimensional space.
+
+Applications of PCA in Machine Learning
+PCA_Applications
+
+PCA is used to visualize multidimensional data.
+It is used to reduce the number of dimensions in healthcare data.
+PCA can help resize an image.
+It can be used in finance to analyze stock data and forecast returns.
+PCA helps to find patterns in the high-dimensional datasets.
+
+1. Normalize the data
+Standardize the data before performing PCA. This will ensure that each feature has a mean = 0 and variance = 1.
+
+Z=x-mu/sigma
+
+
+2. Build the covariance matrix
+Construct a square matrix to express the correlation between two or more features in a multidimensional dataset.
+
+3. Find the Eigenvectors and Eigenvalues
+Calculate the eigenvectors/unit vectors and eigenvalues. Eigenvalues are scalars by which we multiply the eigenvector of the covariance matrix.
+
+4. Sort the eigenvectors in highest to lowest order and select the number of principal components.
+
+
+Now,coming to practial----
+
+This clustering will be done in 2 parts. The 2nd part will be built on 1st part, which is Kmeans clustering.
+
+PCA is a Dimensionality Reduction Algorithm. Now, what is dimensionality and why do we have to do dimensionality reduction?
+https://drive.google.com/drive/u/2/folders/1YNR7Exl_YW-m6hgY2lBClLmJ6_HPgf5E --------- when u have two features, analysis becomes easy because u can visualize
+it. With various 1 D plots, 2 D plots- bar graph,scatter plot, etc and u can understand yr data. If we add 1 more dimension, then it becomes 3 D, and still 
+u can visualize. But what if u have 7 features, that means 7 dims, then it becomes difficult to visualize. So we reduce 7 D to 3 D, then these 3 features
+are known as principal component, which is a linear combination of features.
+
+Then, pc1=theta1*x1+theta2*x2+theta3*x3+theta4*x4+theta5*x5+theta6*x6+theta7*x7 , where theta are some coefficient value.
+pc2=theta1*x1+theta2*x2+theta3*x3+theta4*x4+theta5*x5+theta6*x6+theta7*x7
+pc3=theta1*x1+theta2*x2+theta3*x3+theta4*x4+theta5*x5+theta6*x6+theta7*x7
+
+Now, the thing to remember is Even when we are reducing the dimensions, we should must not loose the information.
+
+The no. of PC depends on no. of features.
+
+https://drive.google.com/drive/u/2/folders/1YNR7Exl_YW-m6hgY2lBClLmJ6_HPgf5E------PCA explanation
+
+AB^2=BC^2+AC^2
+
+Now, BC is the distance that we are trying to minimize.
+
+Now, distance AB is fixed, so what we can do is minimize BC and maximize AC. That is , shift the line towards the data point. And thats how we find the best fit line.
+And this is our PC1. Now, the second PC is always 90degree or perpendicular to 1st one.
+
+One of the best part of PCA is there is no multicollinearity (i.e. no correlation) between PCs.
+
+
+PCA.ipynb--------
+
+
+Auto ML-------------------20.webm
+
+AutoML is an entire pipeline,where so many things are automated like feature selection,feature engineerring,preprocessing,modelling ,hyperparameter tuning,
+everything is automated.
+
+Now,in feature engineering,wehave done polynomial features... one more technique is PCA, in which rather than giving featres to model,we give Principal Components
+to models.
+
+https://machinelearningmastery.com/tpot-for-automated-machine-learning-in-python/-------------------show overview flow ----
+
+
+
+
+ 
+
+-----------
+Association rules and support and confidence---
+
+Before association rules-- we will start with market Basket Analysis--
+
+Now,basket over here is 1 particular bill,every singlebasket talks about bill onsome super markets--the bill is 1 basket--
+now, this basket can have many items ora single item--
+
+i.e. there are lakhs and crores of peoples doing trxs and we are going to analyze them..
+
+Now,lets say we have baskets like-
+
+chips,cold drinks
+maggi,sau
+m, chi,sa
+chi,energy drink
+bread,butter, jam
+bread,jam
+bread,peanut butter
+
+Now,can u think about applications of analyzing this data--
+
+there ae some set of items,always go together.
+
+Now,this knowledge is useful.
+
+1 such application could be correct placing of projects i.e. shelf placement.
+
+2 whenever new product is launched,u want customers to purchase them... now placing of these products. giving some discounts, giving free products.
+
+many more applications.
+
+Now, weuse the concept of association rules-- 
+
+it is based on if -then relationship
+
+if someone purchase maggi then he will purchase sause.
+
+This maggi is known as antecedent and sauce is consequent.  
+
+Now,various association ruleswich we can create based on--
+
+chips,cold drinks----------------- if chips then {cold drink and cake},or if {ch and cold drthen ck },multiple association rules can come out of a single trx.
+
+Now if we consider all these trxs,then n number of association rules will come out.
+
+But,we donot hve to worry about-- we will take small egs of lets say 2 products only---let's say 
+maggi,sau--------------
+m, sau
+bread,butter
+bread,jam
+maggi,chips...
+
+support=no.of antecedent and consequent/total no.of trxs------- tells us how popular the pair ofproduct are.
+
+
+i.e. if someone is purchasing maggi,then sauce will be purchased-- soin our case-- maggi with sause = 2 therefrore support=2/6
+
+Now,support for if ma then chips======support= 1/6
+
+tf,popular combination is putting maggi with sause
+
+Now,if sau then magg------the ans is again 2/6---- becuse in a trx we only check 2 items are purchased together. We donot know wich one is picked first or the 
+sequence of purchase.
+
+tf, if maggi then sause is equivalent to if sause then maggi.
+
+
+Now,lets say we have 2 shops--
+
+
+shop1 sells-
+m,s
+m,s
+m,chips
+m,cheese
+m,cold drinks
+
+shop2 sells-
+m,s
+m,s
+m,chips
+bread,cheese
+chips,colddrink
+
+if maggi then sauce---->shop1 support=2/5,shop2 support=2/5
+
+but this pair,m and s has more popularity in shop2 compare to shop1 bcoz in shop 1 all trxs are for maggi and only 2 includes m,but in shop2 ,only 3 trxs involve
+m and outof that 2 are with sau
+
+Support matrix has its own drawback.That is why, we will go for confidence matrix.
+
+
+confidence= no.of antecedent and consequent/no.of times antecedent is purchased.
+
+shop1 confidence=2/5,shop2 confidence=2/3 
+
+Now,these are new set of txs--
+m,s
+m,c
+b,b
+m,s
+b,c
+pasta,s
+pasta,sauce
+p,s,cheese
+p,s,cheese
+
+support maggi sauce=2/9
+confidence=2/3
+
+But the issue with confidence,is,we are not taking care of the consequent.And is u lookinto the data,sauce is more popular with pasta rather than maggi.
+That is,consequent is more popular with different antecedent. This is one ofthe limitations of confidence formula.
+So, that is why, we go for ----------
+
+
+
+lift= no.of antecedent and consequent purchased together/no.of times antecedent has been purchased*no.of times consequent has been purchased
+
+
+
+for maggi and sauce,lift=2/3*6=1/9=0.11
+
+i.e. for this particular pair,lift value is bad,because sauce is more popular with pasta then maggi.
+
+liftvalue for pasta and sauce=4/4*6=1/6
+
+Now, right now,wehave 9 trxsbut in reality, there are lakhs of trx. Froma single trx, we can have many association rules.That will consume lot of time--
+So for lakhs of trxs,
+
+we use Apriori Algorithm- developed by by r.agarwal and r shrikant.------------Support_Confidence.png------in folder----------
+
+Apriori algo says-dont go forpair of products, first--
+
+Goforthe individual product and write their support.
+
+beer,wine,cheese,eggs,flour,potatochips. In total there are 20 trxs.
+support for beer=8/20, wine=8/20,cheese=8/20, eggs=7/20,flour=5/20,butter=6/20,potato chips=10/20
+
+Now, we will eradicate all the unpopular product with the helpof a threshold,let's sy my threshold support value is 7/20.
+
+Tf,flour and butter are discarded.
+Then,no.of association rules decrease.
+
+
+. Now, Going for second iteration
+
+Now,items discarded, dont consider them ... creating pair of products.
+
+beer and wine,beer cheese,beer eggs,beer potato chips, wine cheese,wine eggs,wine potato chips,cheese eggs,cheese potato chip,eggs potatochips.
+
+Now,calculating support for these pairs.
+beer and wine-3/20
+beer cheese-2/20
+beer eggs-2/20
+beer potato chips-9/20
+wine cheese
+wine eggs 
+wine potato chips
+cheese eggs
+cheese potato chip
+eggs potatochips.
+
+Now, our thresold is same--7/20----discarding unpopular pairs.
+
+Now,in the next iteration repeat this process with 3 products,then with 4, till all done. And like this we will deal with just the popular products.
+Run above steps with different thresholdds, select the one which give satisfactory result.
+
+--------------
+Association_Rules.ipynb-------------GroceryStoreDataset.ipynb-----------31.webm-----------------
+
+!pip install mlxtend
+--------------
+In the retail domain,association rules are very important.Apart from that domain,We can apply the association rules with patients also.
+like cold ,fever,headache,vomiting then what could be the reason.
+lly, another ex. is when people order something in restaurants.U can do research and increase productivity.
+
+------------------------------------------
+
+Network Analytics
+-------------------------------------------
+In a network, we have some entiites known as nodes.These are connected with each other.So, we cantell that, nodes can be called as vertex, and they are connected
+through edges.Give some name to these vertex.
+v=(v1,v2,v3,v4,v5)
+e={(v1,v2),(v1,v4),(v2,v3)......}
+So this network analysis is same as Graph analysis.
+
+We have simple graphs and directed graph , in which commumnication happens in the specific directions.
+
+What we will concentrate is on a two-way graph. and see the use of Network analysis. First, are these nodes always computers?
+No, node can be some social media account like twitter,facebook,itcan be an airport. So we can say that this is a network of some entities.
+
+Now,lets say u r a data scientist---then u must be knowing other data scientists...So,HR can actually see your profile to see how strong your network is.
+
+
+How do u know, how strong a specific node is? Degree centrality ,closeness centrality,betweeness centrality.
+
+
+https://drive.google.com/drive/u/0/folders/1YNR7Exl_YW-m6hgY2lBClLmJ6_HPgf5E
+
+diary--------------------------
+
+Degree Centrality-is direct connections every node is having.Drawbacks of degree centrality is--Only checks the no.of direct connections.
+
+Closeness Centrality-How close specific nodes are from other nodes. 1/total distance from all nodes.
+
+Betweenness Centrality-Togofrom1 node to another, the shortest path that u will follow.
+
+NetworkAnalysis.ipynb--------------------------------------
+
+routes.csv-------------------incomplete------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
