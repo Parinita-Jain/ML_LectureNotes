@@ -1,3 +1,402 @@
+Bias : Inability of the ML model to truly capture
+	   the relationship in the training datset.
+	   
+i.e. If the ML model is not capable of identifying the pattern then we call it as Bias.
+
+
+Variance : It is the difference between the actual and the predicted data points.
+
+(if we have 2 seperate data set one for training and the other for testing, then we can take the 
+actual value and preform the difference between the predicted value.)
+
+actual value : 100
+predicted value: 20
+
+variance (difference) / error: 80
+
+This is the case of high variability.
+
+
+Ideal Scenario: The data should be low on bias and low on variance.
+
+
+overfitting: when the ML model performs well on the training data but does not perform well on the 
+testing data (Training error is low but the testing error is very high) this can be termed as overfitting scenario.
+
+underfitting: when the ML model is unable to identify the patterns in the training dataset then it can be termed as Underfitting.
+
+To deal the overfitting or underfitting scenario use the below technqiues:
+	1. Regularization
+	2. Bagging Technique
+	3. Boosting Technique
+	
+
+
+Assumptions in ML for Regression:
+
+	1. Linearity : Imagine a straight line on a graph, The relationship between what you are trying to predict (dependent variable) and the factors you are considering (independent variable) should be a straight line.
+	
+	
+	
+	2. Independence of Residuals: When you make predictions there will be some difference between the predicted value and the actual value. These difference should not be connected or related. In other words the error in predicting one thing should not help you predict the other thing.
+	
+	
+	
+	3. Homoscedacity (constant variance of residuals) : The difference between your predicted and the actual value should be about the same, no matter what values independent variable takes. (In simple terms we can say it is like saying your mistake should be constant over the period.)
+	
+	
+	4. Normality of Residuals: The mistakes (errors) we make in our prediction should follow a normal (bell shaped) distribution like a typical curve. This isn't critical with a lot of data but helps if the error are somewhat evenly spread out.
+	
+	5. No perfect multi-collinearity.:  If you are using more than one factor to make prediction then those factors should not be perfect copies of each other. Each factor should bring something unique to the table.
+	
+	
+	6. No AutoCorrelation: If you are dealing with the error from one prediction to the next the same should not follow the same pattern.
+	
+	
+	7. Additivity : The impact of a change in one factor should be consistent, regardless of the values of other factors, Each factor should have a steady and consistent effect of what you are trying to predict.
+	
+	
+	In summary these assumptions are like the guidelines that help to make sure that your prediction are reliable and meaningful. These ensure that relationship you find in your data make sense and it is not a fluke.
+	
+	If these assumptions are not met, it doesn't mean that you cannot use linear regression, but we can be a bit more cautious in interpreting our results.
+	
+	
+	
+L1 (Lasso): it adds the absoulte value to the coefficient to the cost function, making some coefficient to be exactly zero.
+
+
+L2 (Ridge) :  It adds the squared value to the coefficient cost function discouraging large coefficient this can help prevent the model from relying too much on one feature.
+
+
+Ridge: converts high variance into low variance.
+
+Lasso : Imagine you are a real estate agent and you want to predict the price of the house based on the various feature like number of bedrooom,bathroom,square foot and crime rate.
+
+here we have a dataset with information on the past sales
+
+in a traditional linear regression it tries to find the best fit line to predict the house price however it may include all features if some of the feature may not be very relevant.
+
+Lasso regression helps in selecting the most important features and make the model simpler.
+
+In summary Lasso regression is like a smart feature selector with a budget constraint.
+It helps you to focus on the most important feature while controlling the overall cost.
+This can lead to simple and potentially more interpretable model especially when dataset with many features.
+
+
+
+carpet area
+bedroom
+bathroom
+parking  ==> 0
+crime rate  == > 0
+distance from station ==> 0
+price
+
+==
+Decision Tree : In DT overfitting scenario usually happend since it understands the data purely.
+	
+Root Node: Contains all the data prior to splitting
+
+Nodes are splitted by splitting criteria into 2 branches which leads to another node.
+
+Further the nodes are divided into two or more sub nodes
+
+Nodes that do not split further are called as Leaf Node
+
+Nodes which split ahead are called as decision nodes.
+
+
+
+DT is a tree where each node represents a feature or an attribute
+
+Each branch represents a decision rule
+
+Each leaf node represents the outcome which can be categorical or continous
+
+It aims to classify the data purely and avoids impurity
+
+The hyperplane that gives less impurity we should go with that hyperplane
+
+To evaluate the purity of the given branch or node:
+	1. Gini Indexing
+	2. Entropy
+	
+	
+Example for Gini Indexing
+
+id	LoanAmt LoanStatus
+1    100      Bad 
+2    200      Good
+3    250      Bad
+4    150      good
+5    800      Bad
+
+
+There are 2 ways of finding impurity in a given feature
+1) Gini indexing
+	1-p^2 - q^2
+	
+2) Entropy:
+	-plogp-qlogq
+
+==
+
+Ensemble Learning: It combines the prediction from
+multiple ML model to create a more accurate and a stable prediction. 
+
+Random Forest: A random forest is an ensemble learning method that combines the prediction of the multiple Decision Tree to produce more accurate and a stable prediction. It is a type of supervised ML algorithm that can be used for both classification and regression.
+
+
+Types of Ensemble Learning:
+ - Bagging : The method involves training multiple model on random subset of the training data. The prediction from the individual models are then combined typically by averaging.
+ 
+ 
+- Boosting: This method involves training a sequence of model where each subsequent model focuses on the error made by the previous model. The prediction are judged using the weighted voting scheme.
+ 
+ - Stacking: 
+ 
+
+================================================================
+
+Logistics Regression
+
+	- If the target data is continous in nature in that case we use linear regression.
+	
+	- If you have categorical data to predict then in that case linear regression wont    work.
+	
+	- In such cases we need to use logistics regression ML algo.
+	
+	
+	- Win / Loss / Draw.
+	- Rainy / Sunny/ Hazy
+	- Thin / Thick
+	- Pay Loan / Cannot Pay Loan
+	
+	
+	
+	
+	Odd's Ratio:
+	
+		Probablity of Event that occurred
+		=======================================
+		Probablity of Event that does not occur
+		
+		
+		OR
+		
+		P(Success)
+		==========
+		P(Failure)
+		
+		=============================================================
+		For day1 Odds Ratio: 0/1  ==> 0
+		For day2 Odds Ratio: 0.5/0.5  ==> 1
+		For day3 Odds Ratio : 1/0 ==> infinite
+		
+		
+		===============================================================
+		
+		
+		
+		
+		
+		Probablity : 0 ---> 0.5 --> 1
+		
+		
+		Odds Ratio : 0 --> 1 ---> infinite
+		
+		
+================================================================================
+
+Logistics Regression 
+
+
+No of Hours (X) 				Pass (Y)          Prediction
+
+2                                   0                  0.88
+3                                   0                  0.95
+4                                   0                  0.98
+5                                   1                  0.99
+6                                   1                  0.99
+
+
+
+
+Step1: to set the initial parameters : θ zero ==> 0     , θ one ==> 1
+
+Iteration : 
+
+	1. for 2 hours sudies (H = 2)
+		
+		Prediction = 
+
+
+
+
+
+
+=========================================================================
+
+θ zero ===> 0
+θ one ===> 0.6
+
+
+No of Hours (X) 				Pass (Y)          Prediction
+
+2                                   0                  0.83       0.76         
+3                                   0                  
+4                                   0                  
+5                                   1                  0.99       0.95  
+6                                   1                  0.99
+
+==
+
+Regression it is a supervised ML algorithm where the target variable can be continous or categorical in nature.
+
+
+KNN
+
+
+Python    ML       Remark
+
+4         3          Fail
+6         7          Pass
+7         8          Pass
+5         5          Fail
+8         8          Pass
+
+
+6         8            ?
+
+
+X = {'Python':6, 'ML':8}
+
+=======================================================================
+
+	  5.3     1     1      3.1     2
+
+sno   1       2     3       4      5
+
+	  F       P     P       F      P
+	  
+	  
+k = 3 
+
+student no (2,3,5)
+
+P(X) :  no of fav outcome              3
+        -----------------             ----    ==> Pass  
+	    no of observation              3
+
+
+
+
+
+for k = 4
+
+student no (2,3,4,5)
+
+P(X)  = 3/4  ==> 75%
+
+
+
+k = 5
+
+3/5 ==> 60%
+
+==
+
+SVM : Support Vector Machines (SVM)
+
+
+Decision Boundary: The decision boundary is the line,plane or hyperplane (in higher dimension) that seperates different classes or categories of data points in a dataset.
+
+In a binary classification problem the decision boundary divides the feature space into regions corresponding to different classes.
+
+The goal of SVM is to find the optimal decision boundary
+that maximizes the margin between classes.
+
+
+
+2. Support Vector: Support vectors are the datapoints that lie closest to the decision boundary (margin). These are the critical points that define the position and orientation of the decision boundary.
+
+
+3. HyperPlane: In SVM, a hyperplane is a generalization of a plane for higher dimension space. In 2-D dimension space, a hyperplane is a line.
+
+
+4. Kernel Trick : The kernel trick is a technique used in SVM to handle non linearly seperable data. It allows SVM to implicitly map the input data into higher dimesnions where the classes now become linearly seperable.
+
+5.Margin: The margin is the distance between the decision boundary and the nearest datapoint from either of the classes.
+
+
+=========================================================================
+
+Clustering
+
+- Unsupervised learning is the process of extracting structures and patterns from unlabbeled data.
+
+- There is no target variable involved.
+
+- There is no right answer.
+
+- user does not need to supervise the model.
+
+eg:
+	- clustering
+	- anomly detection
+	- Neural Network
+	
+	
+K Mean Clustrering
+Hierarchical Clustering
+DB scan (density based)
+
+
+K Mean Clustrering
+	- Decide the value of K
+	- Calculate the centroid value
+	
+	ideal cluster is: variance within is low,variance between can be high
+
+
+	Elbow Technique for finding out the right K value
+	
+	
+
+Example:
+
+Srno       1    2    3    4    5    6    7   8
+
+height     185  170  168  179  182  188  180 180
+
+weight     72   56   60   68   72   77   71  70.
+
+
+
+lets assume that the number of clusters is 2.
+
+
+C1: (185,72)
+	(179,68)  ==> (182,70)
+	(182,72)  ==> (182,71)
+	(188,77)  ==> (185,74)
+	(180,71)  ==> (182.5,72.5)
+	(180,70)  ==> (181.2,71.25)
+
+C2: (170,56)   ===> (169,58) 
+	(168,60)   ===> (169,58)
+
+
+(168,60) ---> which cluster will it belong
+
+
+since a new data point is introduced into cluster C2. hence the centroid value of C2 will now get changed.
+
+
+
+
+===============================================================================================
+
 Data_DataTriangle:
 
 Data can be any observation that has been recorded.
