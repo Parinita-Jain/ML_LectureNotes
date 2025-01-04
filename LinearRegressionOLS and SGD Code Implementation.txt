@@ -1,0 +1,77 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dataset
+X = np.array([1, 2, 3, 4, 5])
+y = np.array([3,4,2,4,5])
+
+# ----------- OLS Method -----------
+# Compute OLS parameters
+X_mean = np.mean(X)
+y_mean = np.mean(y)
+numerator = np.sum((X - X_mean) * (y - y_mean))
+denominator = np.sum((X - X_mean)**2)
+w_ols = numerator / denominator
+b_ols = y_mean - w_ols * X_mean
+
+# Predictions with OLS
+y_pred_ols = w_ols * X + b_ols
+
+# ----------- SGD Method -----------
+# Parameters for SGD
+epochs = 11  # Number of iterations (epochs)
+eta = 0.01  # Learning rate
+w_sgd, b_sgd = 0, 0  # Initialize weights and bias
+
+# Store the predictions at each epoch for visualization
+history_y_pred = []
+
+# Perform SGD (iterative optimization)
+for epoch in range(1,epochs):
+    for i in range(len(X)):
+        # Prediction for the current sample
+        y_pred = w_sgd * X[i] + b_sgd
+
+        # Calculate gradients
+        dw = -2 * X[i] * (y[i] - y_pred)
+        db = -2 * (y[i] - y_pred)
+
+        # Update the parameters
+        w_sgd -= eta * dw
+        b_sgd -= eta * db
+
+    # Save the predictions after each epoch (complete dataset)
+    y_pred_epoch = w_sgd * X + b_sgd
+    print(f"For epoch {epoch} : Updated weight is {w_sgd} and bias is {b_sgd} Predictions are {y_pred_epoch}")
+    history_y_pred.append(y_pred_epoch)
+    
+
+# Final SGD Predictions
+y_pred_sgd = w_sgd * X + b_sgd
+
+# ----------- Visualization -----------
+plt.figure(figsize=(10, 10))
+
+# Plot dataset as scatter points
+plt.scatter(X, y, color='blue', label='Actual Data')
+
+# Plot OLS results (green line)
+plt.plot(X, y_pred_ols, color='green', label='OLS Regression Line')
+
+# Plot intermediate SGD results (dashed gray lines)
+color=["violet","blue","orange","green","red","purple","brown","pink","olive","cyan"]
+for i in range(len(history_y_pred)):
+    plt.plot(X, history_y_pred[i], linestyle='--', color=color[i], alpha=0.5, label=f'Epoch {i + 1}')
+
+# Plot final SGD regression line (red)
+plt.plot(X, y_pred_sgd, color='red', label='Final SGD Regression Line')
+
+plt.title('OLS vs. SGD Regression')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+
+# Print final OLS and SGD parameters
+print(f"OLS Parameters: w = {w_ols:.3f}, b = {b_ols:.3f}")
+print(f"SGD Parameters: w = {w_sgd:.3f}, b = {b_sgd:.3f}")
