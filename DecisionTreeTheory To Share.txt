@@ -1,0 +1,96 @@
+Introduction to Decision Tree
+A decision tree is a supervised machine learning algorithm used for classification and regression tasks. 
+It models decisions and their possible consequences as a tree-like structure. 
+The tree splits the dataset into subsets based on feature values, making decisions at each node.
+#------------------
+Components of a Decision Tree
+Root Node: The top node representing the entire dataset, which is split into two or more homogenous sets based on a specific feature and condition.
+Internal Nodes: These nodes represent the features based on which the data is split.
+Leaf Nodes: The terminal nodes represent the final decision or classification.
+Branches: These represent the decision rules that lead to the next internal node or leaf.
+#------------------
+How Decision Trees Work--
+Feature Selection: The algorithm selects the feature that best splits the dataset at each step. This is typically done using metrics like:
+Gini Impurity (for classification): Measures the probability that a randomly chosen element would be misclassified.
+Entropy:Measures the impurity or randomness in the dataset.
+Information Gain: Measures the reduction in entropy after a dataset is split on a feature.It tries to maximize information gain 
+when selecting a feature to split.
+Mean Squared Error (MSE): Used for regression tasks to minimize the variance in splits.
+
+Splitting: At each node, the dataset is split into subsets based on the value of the selected feature.
+
+Stopping Criteria: The tree-building process stops when one of the following conditions is met:
+A predefined depth of the tree is reached.
+All data points in the subset belong to the same class (pure nodes).
+Further splitting does not improve the model significantly (minimal gain).
+#-----------------
+Prediction: For classification tasks, a prediction is made based on the majority class in the leaf node. 
+For regression, the average of the target values in the leaf node is used as the prediction.
+#-----------------
+Advantages of Decision Trees:
+Easy to interpret: The tree structure provides an intuitive and visual representation of decision-making.
+Handles both numerical and categorical data: Decision trees can be applied to mixed datasets.
+Requires little data preprocessing: No need for scaling or normalization.
+Non-linear relationships: Decision trees can model non-linear relationships effectively.
+Handles missing data: Trees can handle missing values without the need for imputation.
+#----------------
+Disadvantages:
+Overfitting: Decision trees can easily overfit, especially if the tree is very deep (many splits). This can be mitigated through pruning or setting a maximum depth.
+Bias towards dominant classes: If one class is dominant, the tree might be biased towards it, especially with unbalanced datasets.
+Unstable: Small changes in the data can result in a very different tree structure, making decision trees unstable.
+#---------------
+Evaluation Metrics for Decision Trees:
+For classification tasks: Accuracy, Precision, Recall, F1-score, and the Confusion Matrix. 
+For regression tasks: Mean Squared Error (MSE), Mean Absolute Error (MAE), and R-squared.
+#-----------------
+Decision Tree is a versatile algorithm for classification and regression tasks.
+It works by recursively splitting the data based on the feature that provides the best information gain.
+It can be prone to overfitting, but techniques like pruning, setting maximum depth, and cross-validation can help mitigate this.
+Decision trees are easy to visualize and interpret, but they can be unstable if the data is noisy.
+Ensemble methods like Random Forests and Gradient Boosted Trees often build on decision trees to improve performance.
+#-----------------
+Hyperparameter Tuning for Decision Trees--
+To improve the performance of a decision tree, you can tune several hyperparameters:
+
+max_depth: Limits the maximum depth of the tree to prevent overfitting.
+min_samples_split: The minimum number of samples required to split an internal node.
+min_samples_leaf: The minimum number of samples required to be at a leaf node.
+criterion: The function to measure the quality of a split ("gini" for the Gini impurity and "entropy" for information gain).
+You can perform hyperparameter tuning using GridSearchCV or RandomizedSearchCV to find the best set of parameters for your model.
+#------------------------------------
+Concepts on which Decision Tree is based-- CART and CHAID
+
+1.CART (Classification and Regression Trees)
+CART is designed for classification and regression tasks.
+It works by recursively splitting data into subsets based on feature values to create a tree structure.
+
+Key Features of CART:
+Binary Splits Only:At each node, CART performs binary splits (e.g., "Yes/No").
+This means a feature can split the data into exactly two groups.
+
+Gini Impurity for Classification:
+It uses Gini impurity or other measures like entropy to evaluate splits in classification tasks.
+The goal is to minimize impurity, making the resulting subsets as pure as possible.
+
+Mean Squared Error for Regression:
+For regression tasks, CART minimizes the variance within subsets, often using mean squared error (MSE) as a criterion.
+#--------------------------------------
+2. CHAID (Chi-Square Automatic Interaction Detector)is designed for classification tasks,
+particularly with categorical data. It uses statistical tests to identify the best splits.
+It evaluates how strongly a feature (independent variable) is associated with the target variable (dependent variable).
+Features with the smallest p-value (strongest association with the target) are selected for splitting.
+
+Key Features of CHAID:
+Multi-way Splits:
+Unlike CART, CHAID can create multiple branches at a single node, not just binary splits.
+
+Chi-squared Test for Classification:
+For categorical target variables, CHAID uses the Chi-squared test of independence to determine the best splits.
+It finds the feature most significantly associated with the target variable.
+
+#---------------------------
+
+Decision Trees-- 
+DecisionTreeClassifier implements CART for classification.
+DecisionTreeRegressor implements CART for regression.
+
