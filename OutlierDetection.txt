@@ -16,3 +16,26 @@ def identify_iqr_outliers(group):
 
 iqr_outliers = df.groupby('make').apply(identify_iqr_outliers).reset_index(drop=True)
 iqr_outliers
+#0--------------------
+# prompt: put mean value to remove outliers
+
+# Calculate the mean price for each brand
+mean_prices = df.groupby('make')['price'].mean()
+
+# Function to replace outliers with the mean price for the respective brand
+def replace_outliers_with_mean(row):
+    brand = row['make']
+    price = row['price']
+    if brand in mean_prices.index:
+      if price in iqr_outliers['price'].values:
+        return mean_prices[brand]
+      else:
+        return price
+    
+
+
+# Apply the function to replace outliers
+df['price_no_outliers'] = df.apply(replace_outliers_with_mean, axis=1)
+
+# Display the DataFrame with the modified 'price' column
+df
